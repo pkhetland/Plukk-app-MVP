@@ -66,7 +66,7 @@ vinne dritkule premier og få belønninger.""",
             ],  # Banner row children closure
             style={
                 "background-image": "url('/assets/images/lofoten_beach_background.png')",
-                "min-height": "650px"
+                "min-height": "700px"
             },
             justify="around",
             align="center",
