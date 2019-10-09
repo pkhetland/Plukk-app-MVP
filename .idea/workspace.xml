@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/feature_mypage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/callbacks.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lofoten_beach_background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/lofoten_beach_background_blur.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/three_phones_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/three_phones_2.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +86,7 @@
       <workItem from="1570548802450" duration="59000" />
       <workItem from="1570548889833" duration="10958000" />
       <workItem from="1570568190578" duration="58000" />
-      <workItem from="1570620075312" duration="135000" />
+      <workItem from="1570620075312" duration="380000" />
     </task>
     <servers />
   </component>
