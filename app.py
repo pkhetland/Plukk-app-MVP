@@ -23,7 +23,7 @@ modal_form_body = dbc.Form([  # Signup form
             dbc.Input(type="text",
                       id="modal_form_name",
                       placeholder="... Skriv inn navnet ditt her",
-                      style={"width": "80%",
+                      style={"width": "100%",
                              "box-shadow": "0px 2px black"})
         ]),
         dbc.FormGroup([
@@ -32,7 +32,7 @@ modal_form_body = dbc.Form([  # Signup form
                       style={"color": "#fafafa"}),
             dbc.Input(type="email", id="modal_form_email",
                       placeholder="... Skriv inn din e-postadresse her",
-                      style={"width": "80%",
+                      style={"width": "100%",
                              "box-shadow": "0px 2px black"})
         ]),
         dbc.Button("Send inn",
@@ -81,7 +81,7 @@ body = dbc.Container(  # Main container
                     children=[
                         html.H1(
                             "Plukk.",
-                            className="mb-5",
+                            className="mb-5 mt-5",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
                                    "text-align": "center"},
@@ -275,7 +275,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         ],  # Signup row properties
             align="center",
             justify="center",
-            style={"min-height": "600px",
+            style={"min-height": "800px",
                    "background-color": "#3b3b3b",
                    "font-family": "Courier New"}
         ),
@@ -283,12 +283,12 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
             [  # Story row
                 dbc.Col([
                     html.H2("Historien bak Plukk",
-                            className="mb-2 mt-5",
+                            className="mb-5 mt-5",
                             style={"text-shadow": "0px 2px black"}),
                     html.P(
 """En kald februarnatt i 2019 satte et team fra konsulentselskapet Bouvet seg \
 ned for være med å løse et enormt problem: Plast i havet.\n
-I tillegg til et enormt problem hadde de 24 timer på å komme frem til en løsning. Med hjelp \
+I tillegg til et enormt problem hadde de 24 timer på å komme frem til en løsning.\n Med hjelp \
 fra Plastkoordinator i Oslo, Anja Stokkan, ble Plukk løsningen til teamet. \
 Appen hadde som hensikt å motivere folket til å plukke plast og søppel i \
 naturen ved å skape et pantesystem som belønnet dem for strevet.\n
@@ -300,7 +300,7 @@ Dette er Plukk.
                     align="center",
                     style={"text-align": "left",
                            "color": "#D6D6D6"},
-                    className="mb-4 mt-4"
+                    className="mb-5 mt-5"
                 ),
                 dbc.Col(  # Story second col
                     [html.Img(src="/assets/images/bouvet_hackathon.jpg",
@@ -308,7 +308,7 @@ Dette er Plukk.
                               style={"border-radius": "20px",
                                      "border": "solid",
                                      "border-color": "#ffcc00"})],
-                    lg=4,
+                    lg=5,
                     md=7,
                     style={"text-align": "center"},
                     className="mt-3 mb-5"
@@ -316,7 +316,7 @@ Dette er Plukk.
                 # Closing parantheses of Story row
             ],
             style={
-                "min-height": "500px",
+                "min-height": "700px",
                 "background-image": "url('/assets/images/green_background.png')",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
@@ -324,7 +324,7 @@ Dette er Plukk.
                 "color": "#fafafa"
             },
             align="center",
-            justify="center",
+            justify="around",
             # Footer row properties
         )
     ]  # Container children closure
@@ -335,7 +335,8 @@ Dette er Plukk.
 # Open modal 1
 @app.callback(
     Output("modal_form", "is_open"),
-    [Input("open_modal_form_button", "n_clicks"), Input("close_modal_form_button", "n_clicks")],
+    [Input("open_modal_form_button", "n_clicks"),
+     Input("close_modal_form_button", "n_clicks")],
     [State("modal_form", "is_open")])
 def toggle_modal(n1, n2, is_open):
     if n1 or n2:
@@ -351,8 +352,6 @@ Output("modal_form_response", "children"),
      State("modal_form_email", "value")])
 def update_output(n_clicks, input1):
     return input1
-
-
 
 
 app.layout = html.Div([body])  # Define layout
