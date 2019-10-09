@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/feature_achievements_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/feature_map_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/feature_mypage_2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +89,7 @@
       <workItem from="1570548889833" duration="10958000" />
       <workItem from="1570568190578" duration="58000" />
       <workItem from="1570620075312" duration="6094000" />
-      <workItem from="1570628907220" duration="12748000" />
+      <workItem from="1570628907220" duration="13693000" />
     </task>
     <servers />
   </component>

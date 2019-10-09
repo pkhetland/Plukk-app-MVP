@@ -65,7 +65,8 @@ main_form_body = dbc.Form([  # Signup form
                color="warning",
                className="mt-4 mb-2",
                style={"box-shadow": "0px 2px black"},
-               id="submit_main_form_button")
+               id="submit_main_form_button",
+               size="lg")
     ])
 
 
@@ -209,48 +210,30 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                 dbc.Col(
                                     [  # First card
                                         html.Img(
-                                            src="/assets/images/feature_achievements_glare.png",
-                                            width="100%"),
-                                        html.H4(
-                                            "Personlige utfordringer og belønninger",
-                                            className="mt-3 mb-2",
-                                            style={"color": "white",
-                                                   "text-shadow": "0px 1px black"},
-                                        ),
+                                            src="/assets/images/feature_achievements_2.png",
+                                            width="100%")
                                     ],
-                                    lg=3,
+                                    lg=4,
                                     md=7
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
                                         html.Img(
-                                            src="/assets/images/feature_map.png",
+                                            src="/assets/images/feature_map_2.png",
                                             width="100%"
-                                        ),
-                                        html.H4(
-                                            "Et skattekart for plast og Plukk-events",
-                                            className="mt-3 mb-2",
-                                            style={"color": "white",
-                                                   "text-shadow": "0px 1px black"},
-                                        ),
+                                        )
                                     ],
-                                    lg=3,
+                                    lg=4,
                                     md=7
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
                                         html.Img(
-                                            src="/assets/images/feature_mypage.png",
+                                            src="/assets/images/feature_mypage_2.png",
                                             width="100%"
-                                        ),
-                                        html.H4(
-                                            "Og mye mer...",
-                                            className="mt-3 mb-5",
-                                            style={"color": "white",
-                                                   "text-shadow": "0px 1px black"},
-                                        ),
+                                        )
                                     ],
-                                    lg=3,
+                                    lg=4,
                                     md=7
                                 ),  # Third card col closing parantheses
                             ],
@@ -284,8 +267,9 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=6,
-                md=9,
-                style={"color": "white"},
+                md=8,
+                style={"color": "white",
+                       "font-size": "1.2rem"},
                 className="mt-5 mb-5"
             )
         ],  # Signup row properties
