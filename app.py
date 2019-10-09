@@ -80,7 +80,7 @@ body = dbc.Container(  # Main container
                     children=[
                         html.H1(
                             "Plukk.",
-                            className="mb-5 mt-5",
+                            className="mb-5",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
                                    "text-align": "center"},
@@ -92,65 +92,13 @@ og egne poser kan store og små konkurrere mot venner, samarbeide, \
 vinne dritkule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
-                        ),
-                        dbc.Row([
-                            dbc.Col([
-                                dbc.Button(  # Download button
-                                    "Last ned appen",
-                                    id="open_modal_form_button",
-                                    color="warning",
-                                    size="xl",
-                                    style={"box-shadow": "0px 2px black",
-                                           "font-family": "Courier"},
-                                    className="mb-4"
-                                ),
-                                dbc.Modal(
-                                    [
-                                        dbc.ModalBody([
-                                            html.H2(
-                                                "Takk for interessen!",
-                                                style={"color": "#f5a818"}
-                                            ),
-                                            html.P("""
-    Plukk er ikke helt ferdig ennå, men fyll ut e-post og navn under, så kan du \
-    være én av de første til å teste den!\n Vi holder deg også oppdatert på \
-    utviklingen fremover.""",
-                                                    style={"color": "#fafafa"},
-                                                    className="mt-3 mb-3"),
-                                            modal_form_body,  # Gets the form body
-                                            html.Div(id="modal_form_response"),
-                                            dbc.Button("Lukk vinduet",
-                                                       id="close_modal_form_button",
-                                                       className="mt-4",
-                                                       color="danger",
-                                                       size="sm",
-                                                       style={
-                                                           "box-shadow": "0px 2px black"})
-                                        ], style={"background-image": "url('assets/images/green_striped_background.jpg')",
-                                                  "border": "solid 5px #3b3b3b"}
-                                        ),
-                                    ],
-                                    id="modal_form",
-                                    size="md",
-                                    scrollable=True,
-                                    centered=True,
-                                    style={"color": "#fafafa",
-                                           "font-family": "Courier"}
-                                )],
-                                lg=7,
-                                md=4,
-                                className="mt-5"
-                            )  # Second col close
-                        ],
-                        align="center",
-                        justify="center"
                         )
                 ]),
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
-                    md="8",
+                    md="10",
                     className="mb-5"
                 ),
             ],
@@ -158,6 +106,7 @@ vinne dritkule premier og få belønninger.""",
                 "background-image": "url('/assets/images/lofoten_beach_background_blur.jpg')",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
+                "background-attachment": "fixed",
                 "min-height": "700px"
             },
             align="center",
@@ -316,7 +265,8 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                 "min-height": "1000px",
                 "background-image": "url('assets/images/green_background.png')",
                 "background-size": "cover",
-                "background-repeat": "no-repeat"
+                "background-repeat": "no-repeat",
+                "background-attachment": "fixed"
             },
             align="start",
             justify="center"
@@ -386,6 +336,7 @@ Dette er Plukk.
                 "background-image": "url('/assets/images/green_background.png')",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
+                "background-attachment": "fixed",
                 "color": "#fafafa"
             },
             align="center",
