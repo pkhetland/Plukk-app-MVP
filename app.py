@@ -4,8 +4,13 @@ import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
+from dash.dependencies import Input, Output, State
 
-app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+import callbacks as c
+
+app = dash.Dash(__name__,
+                suppress_callback_exceptions=True,
+                external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 server = app.server
 
@@ -36,16 +41,31 @@ vinne dritkule premier og få belønninger.""",
                         ),
                         dbc.Row(
                             [  # Row for buttons within column 1
-                                dbc.Col(
-                                    [
-                                        dbc.Button(
-                                            "Last ned appen",
-                                            # Download button
-                                            color="warning",
-                                            size="lg",
-                                            style={"box-shadow": "0px 2px black"}
-                                        )
-                                    ],
+                                dbc.Col([
+                                    dbc.Button(  # Download button
+                                        "Last ned appen",
+                                        id="open",
+                                        color="warning",
+                                        size="lg",
+                                        style={"box-shadow": "0px 2px black"}
+                                    ),
+                                    dbc.Modal(
+                                        [
+                                            dbc.ModalBody([
+                                                c.form_body
+                                            ], style={"background-image": "url('assets/images/green_background.png')"}
+                                            ),
+                                            dbc.ModalFooter([
+                                                dbc.Button("Close", id="close", className="ml-auto")
+                                            ], style={"background-color": "#3b3b3b"}
+                                            ),
+                                        ],
+                                        id="modal",
+                                        size="md",
+                                        scrollable=True,
+                                        centered=True,
+                                        style={"color": "#fafafa"}
+                                    )],
                                     width=12,
                                 )
                             ],
@@ -200,11 +220,11 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                 dbc.Col(  # Third card
                                     [
                                         html.Img(
-                                            src="/assets/images/feature_achievements_glare.png",
+                                            src="/assets/images/feature_mypage.png",
                                             width="100%",
                                         ),
                                         html.H4(
-                                            "Et råkult poengsystem med premier",
+                                            "Og mye mer...",
                                             className="mt-3 mb-2",
                                             style={"color": "white",
                                                    "text-shadow": "0px 1px black"},
@@ -316,7 +336,20 @@ Dette er Plukk.
     style={"font-family": "courier"}
 )  # Container end bracket
 
-app.layout = html.Div([body])
+# CALLBACKS
+# Open modal 1
+@app.callback(
+    Output("modal", "is_open"),
+    [Input("open", "n_clicks"), Input("close", "n_clicks")],
+    [State("modal", "is_open")])
+def toggle_modal(n1, n2, is_open):
+    if n1 or n2:
+        return not is_open
+    return is_open
 
-if __name__ == "__main__":
+
+app.layout = html.Div([body])  # Define layout
+
+
+if __name__ == "__main__":  # Run program
     app.run_server(debug=True)
