@@ -169,7 +169,7 @@ vinne dritkule premier og få belønninger.""",
                     [
                         dbc.Col(
                             [  # Main col: Heading
-                                html.H1("Slik fungerer PLUKK.", style={"text-align": "center"})
+                                html.H2("Slik fungerer PLUKK.", style={"text-align": "center"})
                             ],
                             width=12,
                             className="mb-5 mt-5",
@@ -228,7 +228,7 @@ vinne dritkule premier og få belønninger.""",
                     [
                         dbc.Col(
                             [  # Main col: Heading
-                                html.H1(
+                                html.H2(
                                     "Hva kan du glede deg til?",
                                     style={"text-align": "center",
                                            "color": "white",
@@ -236,7 +236,7 @@ vinne dritkule premier og få belønninger.""",
                                 )
                             ],
                             width=12,
-                            className="mt-5",
+                            className="mt-5 mb-3",
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
@@ -319,14 +319,14 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                 "background-repeat": "no-repeat"
             },
             align="start",
-            justify="center",
+            justify="center"
         ),  # Feature row closing parantheses
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
-                html.H1("Bli først til å teste Plukk!",
+                html.H2("Bli først til å teste Plukk!",
                         className="mb-4",
                         style={"text-shadow": "0px 2px black"}),
-                html.H4("""Fyll ut skjemaet under for å få informasjon om\
+                html.P("""Fyll ut skjemaet under for å få informasjon om\
                  utviklingen av Plukk eller være én av\
                  de første til å teste appen.""",
                        className="mb-4",
@@ -347,8 +347,8 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         dbc.Row(
             [  # Story row
                 dbc.Col([
-                    html.H1("Historien bak Plukk",
-                            className="mb-5 mt-5",
+                    html.H2("Historien bak Plukk",
+                            className="mb-2 mt-5",
                             style={"text-shadow": "0px 2px black"}),
                     html.P(
 """En kald februarnatt i 2019 satte et team fra konsulentselskapet Bouvet seg \
