@@ -138,8 +138,8 @@ vinne dritkule premier og få belønninger.""",
                                     style={"color": "#fafafa",
                                            "font-family": "courier"}
                                 )],
-                                lg=7,
-                                md=7,
+                                lg=6,
+                                md=8,
                                 sm=5,
                                 xs=6,
                                 className="mt-5"
@@ -153,7 +153,7 @@ vinne dritkule premier og få belønninger.""",
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
-                    md="5",
+                    md="10",
                     sm="9",
                     className="mb-5"
                 ),
@@ -281,8 +281,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                     [  # First card
                                         html.Img(
                                             src="/assets/images/feature_achievements_glare.png",
-                                            width="100%",
-                                        ),
+                                            width="100%"),
                                         html.H4(
                                             "Personlige utfordringer og belønninger",
                                             className="mt-3 mb-2",
@@ -291,6 +290,9 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                         ),
                                     ],
                                     lg=3,
+                                    md=3,
+                                    sm=10,
+                                    xs=10
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
