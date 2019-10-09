@@ -26,6 +26,7 @@
   --danger: #dc3545;
   --light: #f8f9fa;
   --dark: #343a40;
+  --light-gray: #D6D6D6;
   --breakpoint-xs: 0;
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
@@ -368,11 +369,6 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (min-width: 992px) {
-  p, h1, h2, h3, h4, h5, h6,
-  .p, .h1, .h2, .h3, .h4, .h5, .h6 {
-    --font-family-sans-serif: "Courier New", Courier, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: "Courier New", Courier, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  }
 
   h1, .h1 {
   font-size: 2.5rem; font-family: "Courier New";
@@ -404,20 +400,14 @@ h1, h2, h3, h4, h5, h6,
 }
 
 @media (max-width: 991px) {
-  p, h1, h2, h3, h4, h5, h6,
-  .p, .h1, .h2, .h3, .h4, .h5, .h6 {
-    --font-family-sans-serif: "Courier New", Courier, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: "Courier New", Courier, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-  }
-
   h1, .h1 {
-    font-size: 6rem; font-family: "Courier New";
+    font-size: 8rem; font-family: "Courier New";
   }
   h2, .h2 {
-    font-size: 4rem; font-family: "Courier New";
+    font-size: 6rem; font-family: "Courier New";
   }
   h4, .h3 {
-    font-size: 3rem; font-family: "Courier New";
+    font-size: 4rem; font-family: "Courier New";
   }
   p, .p {
     font-size: 2rem; font-family: "Courier New";

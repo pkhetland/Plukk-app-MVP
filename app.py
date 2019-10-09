@@ -90,7 +90,7 @@ body = dbc.Container(  # Main container
 Plukk gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
 og egne poser kan store og små konkurrere mot venner, samarbeide, \
 vinne dritkule premier og få belønninger.""",
-                            style={"color": "#fafafa",
+                            style={"color": "#D6D6D6",
                                    "text-align": "center"},
                         ),
                         dbc.Row([
@@ -363,7 +363,8 @@ Dette er Plukk.
                     lg=5,
                     md=9,
                     align="center",
-                    style={"text-align": "left"},
+                    style={"text-align": "left",
+                           "color": "#D6D6D6"},
                     className="mb-4 mt-4"
                 ),
                 dbc.Col(  # Story second col
