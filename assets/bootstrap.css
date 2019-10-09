@@ -401,42 +401,25 @@ h1, h2, h3, h4, h5, h6,
 
 @media (max-width: 991px) {
   h1, .h1 {
-    font-size: 8rem; font-family: "Courier New";
+    font-size: 12rem; font-family: "Courier New";
   }
   h2, .h2 {
+    font-size: 8rem; font-family: "Courier New";
+  }
+
+  h3, .h3 {
+    font-size: 7rem; font-family: "Courier New";
+  }
+
+  h4, .h4 {
     font-size: 6rem; font-family: "Courier New";
   }
-  h4, .h3 {
-    font-size: 4rem; font-family: "Courier New";
-  }
+
   p, .p {
-    font-size: 2rem; font-family: "Courier New";
+    font-size: 3rem; font-family: "Courier New";
   }
 }
 
-h1, .h1 {
-  font-size: 2.5rem; font-family: "Courier New";
-}
-
-h2, .h2 {
-  font-size: 2rem; font-family: "Courier New";
-}
-
-h3, .h3 {
-  font-size: 1.75rem; font-family: "Courier New";
-}
-
-h4, .h4 {
-  font-size: 1.5rem; font-family: "Courier New";
-}
-
-h5, .h5 {
-  font-size: 1.25rem; font-family: "Courier New";
-}
-
-h6, .h6 {
-  font-size: 1rem; font-family: "Courier New";
-}
 
 .lead {
   font-size: 1.25rem;
