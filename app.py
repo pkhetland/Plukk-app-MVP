@@ -81,85 +81,89 @@ body = dbc.Container(  # Main container
                     children=[
                         html.H1(
                             "Plukk.",
-                            className="mb-5",
+                            className="mb-5 mt-5",
                             style={"color": "white",
                                    "font-size": "4rem",
-                                   "text-shadow": "0px 3px black"},
+                                   "text-shadow": "0px 3px black",
+                                   "text-align": "center"},
                         ),
                         html.P(
                             """\
 Plukk gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
 og egne poser kan store og små konkurrere mot venner, samarbeide, \
 vinne dritkule premier og få belønninger.""",
-                            style={"color": "#fafafa"},
+                            style={"color": "#fafafa",
+                                   "text-align": "center"},
                         ),
-                        dbc.Row(
-                            [  # Row for buttons within column 1
-                                dbc.Col([
-                                    dbc.Button(  # Download button
-                                        "Last ned appen",
-                                        id="open_modal_form_button",
-                                        color="warning",
-                                        size="lg",
-                                        style={"box-shadow": "0px 2px black"}
-                                    ),
-                                    dbc.Modal(
-                                        [
-                                            dbc.ModalBody([
-                                                html.H2(
-                                                    "Takk for interessen!",
-                                                    style={"color": "#f5a818"}
-                                                ),
-                                                html.H5("""
-Plukk er ikke helt ferdig ennå, men fyll ut e-post og navn under, så kan du \
-være én av de første til å teste den!\n Vi holder deg også oppdatert på \
-utviklingen fremover.""",
-                                                        style={"color": "#fafafa"},
-                                                        className="mt-3 mb-3"),
-                                                modal_form_body,  # Gets the form body
-                                                html.Div(id="modal_form_response"),
-                                                dbc.Button("Lukk vinduet",
-                                                           id="close_modal_form_button",
-                                                           className="mt-4",
-                                                           color="danger",
-                                                           size="sm",
-                                                           style={
-                                                               "box-shadow": "0px 2px black"})
-                                            ], style={"background-image": "url('assets/images/green_striped_background.jpg')",
-                                                      "border": "solid 5px #3b3b3b"}
+                        dbc.Row([
+                            dbc.Col([
+                                dbc.Button(  # Download button
+                                    "Last ned appen",
+                                    id="open_modal_form_button",
+                                    color="warning",
+                                    size="lg",
+                                    style={"box-shadow": "0px 2px black"},
+                                    className="mb-4"
+                                ),
+                                dbc.Modal(
+                                    [
+                                        dbc.ModalBody([
+                                            html.H2(
+                                                "Takk for interessen!",
+                                                style={"color": "#f5a818"}
                                             ),
-                                        ],
-                                        id="modal_form",
-                                        size="md",
-                                        scrollable=True,
-                                        centered=True,
-                                        style={"color": "#fafafa",
-                                               "font-family": "courier"}
-                                    )],
-                                    width=12,
-                                )
-                            ],
-                            className="mt-5",
-                            justify="left",
-                            align="center",
-                        ),
-                    ],
-                ),
+                                            html.H5("""
+    Plukk er ikke helt ferdig ennå, men fyll ut e-post og navn under, så kan du \
+    være én av de første til å teste den!\n Vi holder deg også oppdatert på \
+    utviklingen fremover.""",
+                                                    style={"color": "#fafafa"},
+                                                    className="mt-3 mb-3"),
+                                            modal_form_body,  # Gets the form body
+                                            html.Div(id="modal_form_response"),
+                                            dbc.Button("Lukk vinduet",
+                                                       id="close_modal_form_button",
+                                                       className="mt-4",
+                                                       color="danger",
+                                                       size="sm",
+                                                       style={
+                                                           "box-shadow": "0px 2px black"})
+                                        ], style={"background-image": "url('assets/images/green_striped_background.jpg')",
+                                                  "border": "solid 5px #3b3b3b"}
+                                        ),
+                                    ],
+                                    id="modal_form",
+                                    size="md",
+                                    scrollable=True,
+                                    centered=True,
+                                    style={"color": "#fafafa",
+                                           "font-family": "courier"}
+                                )],
+                                lg=7,
+                                md=7,
+                                sm=5,
+                                xs=6,
+                                className="mt-5"
+                            )
+                        ],
+                        align="center",
+                        justify="center"
+                    )
+                ]),
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
-                              width="100%")
-                     ],
+                              width="100%")],
                     lg="5",
-                    md="6",
-                    sm="12"
+                    md="5",
+                    sm="9",
+                    className="mb-5"
                 ),
-            ],  # Banner row children closure
+            ],
             style={
                 "background-image": "url('/assets/images/lofoten_beach_background_blur.jpg')",
                 "min-height": "700px"
             },
-            justify="around",
             align="center",
+            justify="around"
         ),  # Banner row closing parantheses
         dbc.Row(
             [  # About-row
@@ -169,52 +173,67 @@ utviklingen fremover.""",
                             [  # Main col: Heading
                                 html.H1("Slik fungerer PLUKK.", style={"text-align": "center"})
                             ],
-                            width=12,
-                            className="mb-5",
+                            lg=12,
+                            md=12,
+                            sm=12,
+                            className="mb-5 mt-5",
                         ),
                         dbc.Row(
                             [  # Main col: Row for cards
                                 dbc.Col(
                                     [  # First card
                                         html.Img(
-                                            src="/assets/images/bottles_quadratic.png",
+                                            src="/assets/images/pick_garbage_boy.png",
                                             width="100%",
-                                            className="mb-5",
+                                            className="mb-4"
                                         ),
-                                        html.H4("1. Plukk søppel i Plukkposer.")
+                                        html.H4("1. Plukk søppel i Plukkposer.",
+                                                style={"text-align": "center"})
                                     ],
                                     lg=3,
+                                    md=3,
+                                    sm=7,
+                                    xs=7
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
                                         html.Img(
-                                            src="/assets/images/bin_bag.png",
+                                            src="/assets/images/bag_bin.png",
                                             width="100%",
-                                            className="mb-5",
+                                            className="mb-4",
                                         ),
                                         html.H4(
-                                            "2. Scann din personlige QR-kode og kast søpla på best mulig sted."
+                                            "2. Scann din personlige QR-kode og kast søpla på best mulig sted.",
+                                            style={"text-align": "center"}
                                         ),
                                     ],
                                     lg=3,
+                                    md=3,
+                                    sm=7,
+                                    xs=7
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
                                         html.Img(
                                             src="/assets/images/trophy.png",
                                             width="100%",
-                                            className="mb-5",
+                                            className="mb-4",
                                         ),
                                         html.H4(
-                                            "3. Få en poengsum på din konto og bruk dem på markedsplassen vår!"
+                                            "3. Få en poengsum på din konto og bruk dem på markedsplassen vår!",
+                                            style={"text-align": "center"}
                                         ),
                                     ],
                                     lg=3,
+                                    md=3,
+                                    sm=7,
+                                    xs=7
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
                             align="start",
                             style={"text-align": "left"},
+                            className="mb-5"
                         ),  # Card row closing parantheses
                     ]
                 )
