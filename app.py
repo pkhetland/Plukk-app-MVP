@@ -99,7 +99,7 @@ vinne dritkule premier og få belønninger.""",
                                     "Last ned appen",
                                     id="open_modal_form_button",
                                     color="warning",
-                                    size="lg",
+                                    size="xl",
                                     style={"box-shadow": "0px 2px black",
                                            "font-family": "Courier"},
                                     className="mb-4"
@@ -111,7 +111,7 @@ vinne dritkule premier og få belønninger.""",
                                                 "Takk for interessen!",
                                                 style={"color": "#f5a818"}
                                             ),
-                                            html.H5("""
+                                            html.P("""
     Plukk er ikke helt ferdig ennå, men fyll ut e-post og navn under, så kan du \
     være én av de første til å teste den!\n Vi holder deg også oppdatert på \
     utviklingen fremover.""",
@@ -324,7 +324,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
                 html.H2("Bli først til å teste Plukk!",
-                        className="mb-4",
+                        className="mb-4 mt-5",
                         style={"text-shadow": "0px 2px black"}),
                 html.P("""Fyll ut skjemaet under for å få informasjon om\
                  utviklingen av Plukk eller være én av\
@@ -335,7 +335,8 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
             ],  # Signup col properties
                 lg=6,
                 md=9,
-                style={"color": "white"}
+                style={"color": "white"},
+                className="mt-5 mb-5"
             )
         ],  # Signup row properties
             align="center",

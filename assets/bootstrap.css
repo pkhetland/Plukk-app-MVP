@@ -13,7 +13,7 @@
   --orange: #fd7e14;
   --yellow: #ffc107;
   --green: #28a745;
-  --teal: #20c997;
+  --teal: #08e5b0;
   --cyan: #17a2b8;
   --white: #fff;
   --gray: #6c757d;
@@ -401,18 +401,18 @@ h1, h2, h3, h4, h5, h6,
 
 @media (max-width: 991px) {
   h1, .h1 {
-    font-size: 12rem; font-family: "Courier New";
+    font-size: 8rem; font-family: "Courier";
   }
   h2, .h2 {
-    font-size: 8rem; font-family: "Courier New";
+    font-size: 4rem; font-family: "Courier";
   }
 
   h3, .h3 {
-    font-size: 7rem; font-family: "Courier New";
+    font-size: 3.5rem; font-family: "Courier";
   }
 
   h4, .h4 {
-    font-size: 6rem; font-family: "Courier New";
+    font-size: 3rem; font-family: "Courier";
   }
 
   p, .p {
