@@ -76,8 +76,7 @@ body = dbc.Container(  # Main container
             [  # Banner first row
                 dbc.Col(  # Banner first column
                     lg=4,
-                    md=6,
-                    sm=12,
+                    md=10,
                     children=[
                         html.H1(
                             "Plukk.",
@@ -93,7 +92,9 @@ Plukk gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
 og egne poser kan store og små konkurrere mot venner, samarbeide, \
 vinne dritkule premier og få belønninger.""",
                             style={"color": "#fafafa",
-                                   "text-align": "center"},
+                                   "text-align": "center",
+                                   "font-size": "1.2em",
+                                   "font-family": "courier"},
                         ),
                         dbc.Row([
                             dbc.Col([
@@ -138,28 +139,27 @@ vinne dritkule premier og få belønninger.""",
                                     style={"color": "#fafafa",
                                            "font-family": "courier"}
                                 )],
-                                lg=6,
-                                md=8,
-                                sm=5,
-                                xs=6,
+                                lg=7,
+                                md=4,
                                 className="mt-5"
-                            )
+                            )  # Second col close
                         ],
                         align="center",
                         justify="center"
-                    )
+                        )
                 ]),
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
-                    md="10",
-                    sm="9",
+                    md="8",
                     className="mb-5"
                 ),
             ],
             style={
                 "background-image": "url('/assets/images/lofoten_beach_background_blur.jpg')",
+                "background-repeat": "no-repeat",
+                "background-size": "cover",
                 "min-height": "700px"
             },
             align="center",
@@ -173,9 +173,7 @@ vinne dritkule premier og få belønninger.""",
                             [  # Main col: Heading
                                 html.H1("Slik fungerer PLUKK.", style={"text-align": "center"})
                             ],
-                            lg=12,
-                            md=12,
-                            sm=12,
+                            width=12,
                             className="mb-5 mt-5",
                         ),
                         dbc.Row(
@@ -183,56 +181,41 @@ vinne dritkule premier og få belønninger.""",
                                 dbc.Col(
                                     [  # First card
                                         html.Img(
-                                            src="/assets/images/pick_garbage_boy.png",
+                                            src="/assets/images/about_card.png",
                                             width="100%",
                                             className="mb-4"
-                                        ),
-                                        html.H4("1. Plukk søppel i Plukkposer.",
-                                                style={"text-align": "center"})
+                                        )
                                     ],
-                                    lg=3,
-                                    md=3,
-                                    sm=7,
-                                    xs=7
+                                    lg=4,
+                                    md=8
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
                                         html.Img(
-                                            src="/assets/images/bag_bin.png",
+                                            src="/assets/images/about_card_2.png",
                                             width="100%",
                                             className="mb-4",
                                         ),
-                                        html.H4(
-                                            "2. Scann din personlige QR-kode og kast søpla på best mulig sted.",
-                                            style={"text-align": "center"}
-                                        ),
                                     ],
-                                    lg=3,
-                                    md=3,
-                                    sm=7,
-                                    xs=7
+                                    lg=4,
+                                    md=8
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
                                         html.Img(
-                                            src="/assets/images/trophy.png",
+                                            src="/assets/images/about_card_3.png",
                                             width="100%",
                                             className="mb-4",
                                         ),
-                                        html.H4(
-                                            "3. Få en poengsum på din konto og bruk dem på markedsplassen vår!",
-                                            style={"text-align": "center"}
-                                        ),
                                     ],
-                                    lg=3,
-                                    md=3,
-                                    sm=7,
-                                    xs=7
+                                    lg=4,
+                                    md=8
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
-                            align="start",
-                            style={"text-align": "left"},
+                            align="center",
+                            style={"text-align": "left",
+                                   "font-size": "1em"},
                             className="mb-5"
                         ),  # Card row closing parantheses
                     ]
