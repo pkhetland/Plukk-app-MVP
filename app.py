@@ -10,7 +10,7 @@ import csv
 
 app = dash.Dash(__name__,
                 suppress_callback_exceptions=True,
-                external_stylesheets=[dbc.themes.BOOTSTRAP])
+                external_stylesheets=["url('/assets/boostrap.css')"])
 
 server = app.server
 
@@ -82,7 +82,6 @@ body = dbc.Container(  # Main container
                             "Plukk.",
                             className="mb-5 mt-5",
                             style={"color": "white",
-                                   "font-size": "4rem",
                                    "text-shadow": "0px 3px black",
                                    "text-align": "center"},
                         ),
@@ -92,9 +91,7 @@ Plukk gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
 og egne poser kan store og små konkurrere mot venner, samarbeide, \
 vinne dritkule premier og få belønninger.""",
                             style={"color": "#fafafa",
-                                   "text-align": "center",
-                                   "font-size": "1.2em",
-                                   "font-family": "courier"},
+                                   "text-align": "center"},
                         ),
                         dbc.Row([
                             dbc.Col([
@@ -103,7 +100,8 @@ vinne dritkule premier og få belønninger.""",
                                     id="open_modal_form_button",
                                     color="warning",
                                     size="lg",
-                                    style={"box-shadow": "0px 2px black"},
+                                    style={"box-shadow": "0px 2px black",
+                                           "font-family": "Courier"},
                                     className="mb-4"
                                 ),
                                 dbc.Modal(
@@ -137,7 +135,7 @@ vinne dritkule premier og få belønninger.""",
                                     scrollable=True,
                                     centered=True,
                                     style={"color": "#fafafa",
-                                           "font-family": "courier"}
+                                           "font-family": "Courier"}
                                 )],
                                 lg=7,
                                 md=4,
@@ -183,7 +181,7 @@ vinne dritkule premier og få belønninger.""",
                                         html.Img(
                                             src="/assets/images/about_card.png",
                                             width="100%",
-                                            className="mb-4"
+                                            className="mb-4 mt-2"
                                         )
                                     ],
                                     lg=4,
@@ -214,8 +212,7 @@ vinne dritkule premier og få belønninger.""",
                             ],
                             justify="around",
                             align="center",
-                            style={"text-align": "left",
-                                   "font-size": "1em"},
+                            style={"text-align": "left"},
                             className="mb-5"
                         ),  # Card row closing parantheses
                     ]
@@ -255,8 +252,8 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                 )
                             ],
                             lg={"size": 6, "offset": 3},
-                            md={"size": 8, "offset": 2},
-                            className="mb-8",
+                            md={"size": 10, "offset": 1},
+                            className="mb-5",
                         ),
                         dbc.Row(
                             [  # Main col: Row for cards
@@ -273,14 +270,13 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                         ),
                                     ],
                                     lg=3,
-                                    md=3,
-                                    sm=10,
-                                    xs=10
+                                    md=7
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
                                         html.Img(
-                                            src="/assets/images/feature_map.png", width="100%"
+                                            src="/assets/images/feature_map.png",
+                                            width="100%"
                                         ),
                                         html.H4(
                                             "Et skattekart for plast og Plukk-events",
@@ -290,21 +286,23 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                         ),
                                     ],
                                     lg=3,
+                                    md=7
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
                                         html.Img(
                                             src="/assets/images/feature_mypage.png",
-                                            width="100%",
+                                            width="100%"
                                         ),
                                         html.H4(
                                             "Og mye mer...",
-                                            className="mt-3 mb-2",
+                                            className="mt-3 mb-5",
                                             style={"color": "white",
                                                    "text-shadow": "0px 1px black"},
                                         ),
                                     ],
                                     lg=3,
+                                    md=7
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
@@ -316,7 +314,9 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
             ],  # Properties of feature row
             style={
                 "min-height": "1000px",
-                "background-image": "url('assets/images/green_background.png')"
+                "background-image": "url('assets/images/green_background.png')",
+                "background-size": "cover",
+                "background-repeat": "no-repeat"
             },
             align="start",
             justify="center",
@@ -326,7 +326,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                 html.H1("Bli først til å teste Plukk!",
                         className="mb-4",
                         style={"text-shadow": "0px 2px black"}),
-                html.P("""Fyll ut skjemaet under for å få informasjon om\
+                html.H4("""Fyll ut skjemaet under for å få informasjon om\
                  utviklingen av Plukk eller være én av\
                  de første til å teste appen.""",
                        className="mb-4",
@@ -334,19 +334,21 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=6,
+                md=9,
                 style={"color": "white"}
             )
         ],  # Signup row properties
             align="center",
             justify="center",
             style={"min-height": "600px",
-                   "background-color": "#3b3b3b"}
+                   "background-color": "#3b3b3b",
+                   "font-family": "Courier New"}
         ),
         dbc.Row(
             [  # Story row
                 dbc.Col([
                     html.H1("Historien bak Plukk",
-                            className="mb-3",
+                            className="mb-5 mt-5",
                             style={"text-shadow": "0px 2px black"}),
                     html.P(
 """En kald februarnatt i 2019 satte et team fra konsulentselskapet Bouvet seg \
@@ -359,8 +361,10 @@ Dette er Plukk.
                            """)
                      ],  # Story first col
                     lg=5,
+                    md=9,
                     align="center",
                     style={"text-align": "left"},
+                    className="mb-4 mt-4"
                 ),
                 dbc.Col(  # Story second col
                     [html.Img(src="/assets/images/bouvet_hackathon.jpg",
@@ -369,21 +373,24 @@ Dette er Plukk.
                                      "border": "solid",
                                      "border-color": "#ffcc00"})],
                     lg=4,
-                    style={"text-align": "center"}
+                    md=7,
+                    style={"text-align": "center"},
+                    className="mt-3 mb-5"
                 )
                 # Closing parantheses of Story row
             ],
             style={
                 "min-height": "500px",
                 "background-image": "url('/assets/images/green_background.png')",
+                "background-repeat": "no-repeat",
+                "background-size": "cover",
                 "color": "#fafafa"
             },
             align="center",
             justify="center",
             # Footer row properties
-        ),
-    ],  # Container children closure
-    style={"font-family": "courier"}
+        )
+    ]  # Container children closure
 )  # Container end bracket
 
 
