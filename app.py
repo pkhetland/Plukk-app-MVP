@@ -6,13 +6,67 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
-import callbacks as c
+import csv
 
 app = dash.Dash(__name__,
                 suppress_callback_exceptions=True,
                 external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 server = app.server
+
+# FORMS
+modal_form_body = dbc.Form([  # Signup form
+        dbc.FormGroup([  # First name input
+            dbc.Label("Navn",
+                      html_for="name_row",
+                      style={"color": "#fafafa"}),
+            dbc.Input(type="text",
+                      id="modal_form_name",
+                      placeholder="... Skriv inn navnet ditt her",
+                      style={"width": "80%",
+                             "box-shadow": "0px 2px black"})
+        ]),
+        dbc.FormGroup([
+            dbc.Label("E-postadresse",
+                      html_for="email_row",
+                      style={"color": "#fafafa"}),
+            dbc.Input(type="email", id="modal_form_email",
+                      placeholder="... Skriv inn din e-postadresse her",
+                      style={"width": "80%",
+                             "box-shadow": "0px 2px black"})
+        ]),
+        dbc.Button("Send inn",
+                   color="warning",
+                   className="mt-4 mb-2",
+                   style={"box-shadow": "0px 2px black"})
+    ])
+
+main_form_body = dbc.Form([  # Signup form
+    dbc.FormGroup([  # First name input
+        dbc.Label("Navn",
+                  html_for="name_row",
+                  style={"color": "#fafafa"}),
+        dbc.Input(type="text",
+                  id="main_form_name",
+                  placeholder="... Skriv inn navnet ditt her",
+                  style={"width": "80%",
+                         "box-shadow": "0px 2px black"})
+    ]),
+    dbc.FormGroup([
+        dbc.Label("E-postadresse",
+                  html_for="email_row",
+                  style={"color": "#fafafa"}),
+        dbc.Input(type="email", id="main_form_email",
+                  placeholder="... Skriv inn din e-postadresse her",
+                  style={"width": "80%",
+                         "box-shadow": "0px 2px black"})
+    ]),
+    dbc.Button("Send inn",
+               color="warning",
+               className="mt-4 mb-2",
+               style={"box-shadow": "0px 2px black"},
+               id="submit_main_form_button")
+    ])
 
 
 body = dbc.Container(  # Main container
@@ -23,7 +77,7 @@ body = dbc.Container(  # Main container
                 dbc.Col(  # Banner first column
                     lg=4,
                     md=6,
-                    sm=8,
+                    sm=12,
                     children=[
                         html.H1(
                             "Plukk.",
@@ -44,7 +98,7 @@ vinne dritkule premier og få belønninger.""",
                                 dbc.Col([
                                     dbc.Button(  # Download button
                                         "Last ned appen",
-                                        id="open",
+                                        id="open_modal_form_button",
                                         color="warning",
                                         size="lg",
                                         style={"box-shadow": "0px 2px black"}
@@ -52,19 +106,35 @@ vinne dritkule premier og få belønninger.""",
                                     dbc.Modal(
                                         [
                                             dbc.ModalBody([
-                                                c.form_body
-                                            ], style={"background-image": "url('assets/images/green_background.png')"}
-                                            ),
-                                            dbc.ModalFooter([
-                                                dbc.Button("Close", id="close", className="ml-auto")
-                                            ], style={"background-color": "#3b3b3b"}
+                                                html.H2(
+                                                    "Takk for interessen!",
+                                                    style={"color": "#f5a818"}
+                                                ),
+                                                html.H5("""
+Plukk er ikke helt ferdig ennå, men fyll ut e-post og navn under, så kan du \
+være én av de første til å teste den!\n Vi holder deg også oppdatert på \
+utviklingen fremover.""",
+                                                        style={"color": "#fafafa"},
+                                                        className="mt-3 mb-3"),
+                                                modal_form_body,  # Gets the form body
+                                                html.Div(id="modal_form_response"),
+                                                dbc.Button("Lukk vinduet",
+                                                           id="close_modal_form_button",
+                                                           className="mt-4",
+                                                           color="danger",
+                                                           size="sm",
+                                                           style={
+                                                               "box-shadow": "0px 2px black"})
+                                            ], style={"background-image": "url('assets/images/green_striped_background.jpg')",
+                                                      "border": "solid 5px #3b3b3b"}
                                             ),
                                         ],
-                                        id="modal",
+                                        id="modal_form",
                                         size="md",
                                         scrollable=True,
                                         centered=True,
-                                        style={"color": "#fafafa"}
+                                        style={"color": "#fafafa",
+                                               "font-family": "courier"}
                                     )],
                                     width=12,
                                 )
@@ -257,31 +327,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                  de første til å teste appen.""",
                        className="mb-4",
                        style={"color": "teal"}),
-                dbc.Form([  # Signup form
-                    dbc.FormGroup([  # First name input
-                        dbc.Label("Navn",
-                                  html_for="name_row",
-                                  style={"color": "#fafafa"}),
-                        dbc.Input(type="text",
-                                  id="name",
-                                  placeholder="... Skriv inn navnet ditt her",
-                                  style={"width": "80%",
-                                         "box-shadow": "0px 2px black"})
-                    ]),
-                    dbc.FormGroup([
-                        dbc.Label("E-postadresse",
-                                  html_for="email_row",
-                                  style={"color": "#fafafa"}),
-                        dbc.Input(type="email", id="email",
-                                  placeholder="... Skriv inn din e-postadresse her",
-                                  style={"width": "80%",
-                                         "box-shadow": "0px 2px black"})
-                    ]),
-                    dbc.Button("Send inn",
-                               color="warning",
-                               className="mt-4 mb-2",
-                               style={"box-shadow": "0px 2px black"})
-                ])
+                main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=6,
                 style={"color": "white"}
@@ -336,16 +382,29 @@ Dette er Plukk.
     style={"font-family": "courier"}
 )  # Container end bracket
 
+
 # CALLBACKS
 # Open modal 1
 @app.callback(
-    Output("modal", "is_open"),
-    [Input("open", "n_clicks"), Input("close", "n_clicks")],
-    [State("modal", "is_open")])
+    Output("modal_form", "is_open"),
+    [Input("open_modal_form_button", "n_clicks"), Input("close_modal_form_button", "n_clicks")],
+    [State("modal_form", "is_open")])
 def toggle_modal(n1, n2, is_open):
     if n1 or n2:
         return not is_open
     return is_open
+
+
+# Submit forms
+@app.callback(
+Output("modal_form_response", "children"),
+    [Input("submit_modal_form_button", "n_clicks")],
+    [State("modal_form_name", "value"),
+     State("modal_form_email", "value")])
+def update_output(n_clicks, input1):
+    return input1
+
+
 
 
 app.layout = html.Div([body])  # Define layout
