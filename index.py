@@ -13,10 +13,6 @@ from app import app
 import layout  # Import the dash bootstrap layout
 import callbacks
 
-app.config.from_object(os.environ['APP_SETTINGS'])
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
-
 body = layout.body  # Get layout from layout.py
 
 app.layout = html.Div([body])  # Define layout
