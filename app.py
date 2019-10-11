@@ -12,7 +12,7 @@ server = Flask(__name__)
 app = dash.Dash(__name__,
                 suppress_callback_exceptions=True,
                 external_stylesheets=["url('/assets/boostrap.css')"])
-server.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://localhost/contacts"
+server.config['SQLALCHEMY_DATABASE_URI'] = DB_URL
 server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(server)
 
