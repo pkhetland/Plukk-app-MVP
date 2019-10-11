@@ -6,9 +6,6 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 
-import psycopg2  # Manages connection to Postgres database
-from flask_sqlalchemy import SQLAlchemy
-
 from app import app
 import layout  # Import the dash bootstrap layout
 import callbacks
