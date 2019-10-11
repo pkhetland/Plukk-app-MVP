@@ -2,3 +2,7 @@ gunicorn
 flask
 dash
 dash-bootstrap-components
+requests
+psycopg2
+dash-dependencies
+flask-sqlalchemy
