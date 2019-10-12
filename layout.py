@@ -130,7 +130,8 @@ vinne dritkule premier og få belønninger.""",
                     className="mt-5"  # Properties of about-col
                 )  # About col closure
             ],  # Properties of about-row
-            style={"min-height": "700px"},
+            style={"min-height": "700px",
+                   "background-color": "#fafafa"},
             align="center",
             justify="center",
         ),  # About row closure
