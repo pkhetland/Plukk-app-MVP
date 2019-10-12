@@ -145,11 +145,11 @@ vinne dritkule premier og få belønninger.""",
                                     style={"text-align": "center",
                                            "color": "white",
                                            "text-shadow": "0px 2px black",},
-                                    className="mt-5 mb-2"
+                                    className="mt-5 mb-4"
                                 )
                             ],
                             width=12,
-                            className="mt-6 mb-3",
+                            className="mt-5 mb-3",
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
@@ -161,7 +161,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
 \nHer er noen eksempler:""",
                                     style={"text-align": "center",
                                            "color": "silver"},
-                                    className="mt-2 mb-4",
+                                    className="mt-5 mb-5",
                                 )
                             ],
                             lg={"size": 6, "offset": 3},
@@ -204,7 +204,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                             align="start",
                             style={"text-align": "center"},
                         ),  # Card row closing parantheses
-                    ]
+                    ], className="mt-5 mb-5"
                 )
             ],  # Properties of feature row
             style={
@@ -272,7 +272,7 @@ Dette er Plukk.
                                      "border": "solid",
                                      "border-color": "#ffcc00"})],
                     lg=5,
-                    md=7,
+                    md=10,
                     style={"text-align": "center"},
                     className="mt-3 mb-5"
                 )
