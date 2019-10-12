@@ -3,56 +3,28 @@ import dash_bootstrap_components as dbc
 import dash_html_components as html
 
 # FORMS
-modal_form_body = dbc.Form([  # Signup form
-        dbc.FormGroup([  # First name input
-            dbc.Label("Navn",
-                      html_for="name_row",
-                      style={"color": "#fafafa"}),
-            dbc.Input(type="text",
-                      id="modal_form_name",
-                      placeholder="... Skriv inn navnet ditt her",
-                      style={"width": "100%",
-                             "box-shadow": "0px 2px black"})
-        ]),
-        dbc.FormGroup([
-            dbc.Label("E-postadresse",
-                      html_for="email_row",
-                      style={"color": "#fafafa"}),
-            dbc.Input(type="email", id="modal_form_email",
-                      placeholder="... Skriv inn din e-postadresse her",
-                      style={"width": "100%",
-                             "box-shadow": "0px 2px black"})
-        ]),
-        dbc.Button("Send inn",
-                   color="warning",
-                   className="mt-4 mb-2",
-                   style={"box-shadow": "0px 2px black"})
-    ])
 
 main_form_body = dbc.Form([  # Signup form
     dbc.FormGroup([  # First name input
-        dbc.Label("Navn",
-                  html_for="name_row",
-                  style={"color": "#fafafa"}),
+        html.P("Navn"),
         dbc.Input(type="text",
                   id="main_form_name",
-                  placeholder="... Skriv inn navnet ditt her",
+                  placeholder="...",
                   style={"width": "80%",
                          "box-shadow": "0px 2px black"})
     ]),
     dbc.FormGroup([
-        dbc.Label("E-postadresse",
-                  html_for="email_row",
-                  style={"color": "#fafafa"}),
+        html.P("E-postadresse"),
         dbc.Input(type="email", id="main_form_email",
-                  placeholder="... Skriv inn din e-postadresse her",
+                  placeholder="...",
                   style={"width": "80%",
-                         "box-shadow": "0px 2px black"})
+                         "box-shadow": "0px 2px black",
+                         "size": "2rem"})
     ]),
     html.P("", id="main_form_output", style={"color": "orange"}),
     dbc.Button("Send inn",
                color="warning",
-               className="mt-4 mb-2",
+               className="mt-4 mb-2 p",
                style={"box-shadow": "0px 2px black"},
                id="submit_main_form",
                size="lg")
@@ -154,13 +126,14 @@ vinne dritkule premier og få belønninger.""",
                             style={"text-align": "left"},
                             className="mb-5"
                         ),  # Card row closing parantheses
-                    ]
-                )
+                    ],
+                    className="mt-5"  # Properties of about-col
+                )  # About col closure
             ],  # Properties of about-row
             style={"min-height": "700px"},
             align="center",
             justify="center",
-        ),  # About row closing parantheses
+        ),  # About row closure
         dbc.Row(
             [  # Feature-row
                 dbc.Col(  # Feature-row: Main col
@@ -171,11 +144,12 @@ vinne dritkule premier og få belønninger.""",
                                     "Hva kan du glede deg til?",
                                     style={"text-align": "center",
                                            "color": "white",
-                                           "text-shadow": "0px 2px black"},
+                                           "text-shadow": "0px 2px black",},
+                                    className="mt-5 mb-2"
                                 )
                             ],
                             width=12,
-                            className="mt-5 mb-3",
+                            className="mt-6 mb-3",
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
@@ -203,7 +177,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                             width="100%")
                                     ],
                                     lg=4,
-                                    md=7
+                                    md=10
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
@@ -213,7 +187,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                         )
                                     ],
                                     lg=4,
-                                    md=7
+                                    md=10
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
@@ -223,7 +197,7 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                                         )
                                     ],
                                     lg=4,
-                                    md=7
+                                    md=10
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
