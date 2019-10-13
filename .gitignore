@@ -3,5 +3,4 @@ venv
 .DS_Store
 .env
 __pycache__/
-env/
 .gitignore
