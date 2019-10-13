@@ -20,7 +20,7 @@ app = dash.Dash(__name__,
                 external_stylesheets=["url('/assets/boostrap.css')"])
 
 
-app.config.from_object(os.environ['APP_SETTINGS'])
+#app.config.from_object(os.environ['APP_SETTINGS'])
 server.config['SQLALCHEMY_DATABASE_URI'] = DB_URL_HEROKU
 server.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(server)
