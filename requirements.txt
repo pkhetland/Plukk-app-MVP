@@ -5,3 +5,5 @@ dash-bootstrap-components
 requests
 psycopg2
 flask-sqlalchemy
+flask_migrate
+flask_script

@@ -1,7 +1,5 @@
 from dash.dependencies import Input, Output, State
 from app import app
-from flask_sqlalchemy import SQLAlchemy
-
 
 # Submit forms
 @app.callback(
@@ -15,3 +13,5 @@ def form_response(n_clicks, main_form_name, main_form_email):
             return "Du må fylle inn både e-postadresse og navnet ditt."
         else:
             return "Hurra! Du har spennende tider i vente."
+
+
