@@ -8,3 +8,4 @@ flask-sqlalchemy
 flask_migrate
 flask_script
 pandas
+moesifwsgi
