@@ -69,7 +69,7 @@ vinne kule premier og få belønninger.""",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
                 "background-attachment": "fixed",
-                "min-height": "700px"
+                "min-height": "750px"
             },
             align="center",
             justify="around"
