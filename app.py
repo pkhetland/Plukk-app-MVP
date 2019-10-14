@@ -17,3 +17,5 @@ moesif_settings = {
 }
 
 server.wsgi_app = MoesifMiddleware(server.wsgi_app, moesif_settings)
+
+app.title = 'PLUKK'

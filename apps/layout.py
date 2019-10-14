@@ -9,17 +9,17 @@ main_form_body = dbc.Form([  # Signup form
         html.P("Navn"),
         dbc.Input(type="text",
                   id="main_form_name",
-                  placeholder="...",
+                  placeholder="Skriv inn navnet ditt...",
                   style={"width": "80%",
                          "box-shadow": "0px 2px black"})
     ]),
     dbc.FormGroup([
         html.P("E-postadresse"),
         dbc.Input(type="email", id="main_form_email",
-                  placeholder="...",
+                  placeholder="Skriv inn e-posten din...",
                   style={"width": "80%",
                          "box-shadow": "0px 2px black",
-                         "size": "2rem"})
+                         "size": "3rem"})
     ]),
     html.P("", id="main_form_output", style={"color": "orange"}),
     dbc.Button("Send inn",
@@ -41,7 +41,7 @@ body = dbc.Container(  # Main container
                     md=10,
                     children=[
                         html.H1(
-                            "Plukk.",
+                            "PLUKK.",
                             className="mb-5 mt-5",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
@@ -49,9 +49,9 @@ body = dbc.Container(  # Main container
                         ),
                         html.P(
                             """\
-Plukk gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
+PLUKK gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
 og egne poser kan store og små konkurrere mot venner, samarbeide, \
-vinne dritkule premier og få belønninger.""",
+vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
                         )
@@ -220,12 +220,14 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         ),  # Feature row closing parantheses
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
-                html.H2("Bli først til å teste Plukk!",
+                html.H2("Bli først til å teste PLUKK!",
                         className="mb-4 mt-5",
                         style={"text-shadow": "0px 2px black"}),
                 html.P("""Fyll ut skjemaet under for å få informasjon om\
                  utviklingen av Plukk eller være én av\
-                 de første til å teste appen.""",
+                 de første til å teste appen. 
+                 (Slapp av, vi sender bare \
+                 nyttig innhold.)""",
                        className="mb-4",
                        style={"color": "teal"}),
                 main_form_body  # Gets the form body from resources.py
@@ -246,17 +248,17 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         dbc.Row(
             [  # Story row
                 dbc.Col([
-                    html.H2("Historien bak Plukk",
+                    html.H2("Historien bak PLUKK",
                             className="mb-5 mt-5",
                             style={"text-shadow": "0px 2px black"}),
                     html.P(
 """En kald februarnatt i 2019 satte et team fra konsulentselskapet Bouvet seg \
 ned for være med å løse et enormt problem: Plast i havet.\n
 I tillegg til et enormt problem hadde de 24 timer på å komme frem til en løsning.\n Med hjelp \
-fra Plastkoordinator i Oslo, Anja Stokkan, ble Plukk løsningen til teamet. \
+fra Plastkoordinator i Oslo, Anja Stokkan, ble PLUKK løsningen til teamet. \
 Appen hadde som hensikt å motivere folket til å plukke plast og søppel i \
 naturen ved å skape et pantesystem som belønnet dem for strevet.\n
-Dette er Plukk.
+Dette er PLUKK.
                            """)
                      ],  # Story first col
                     lg=5,
