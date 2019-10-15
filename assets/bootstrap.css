@@ -368,6 +368,23 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
+@media (max-width: 992px) {
+  .m_top_lg {
+    margin-top: 7rem;
+  }
+  .m_top_md {
+    margin-bottom: 3rem;
+  }
+
+  .m_bottom_lg {
+    margin-bottom: 7rem;
+  }
+
+  .m_bottom_md {
+    margin-bottom: 3rem;
+  }
+}
+
 @media (min-width: 992px) {
 
   h1, .h1 {

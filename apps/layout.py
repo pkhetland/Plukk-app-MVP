@@ -42,7 +42,7 @@ body = dbc.Container(  # Main container
                     children=[
                         html.H1(
                             "PLUKK.",
-                            className="mb-5 mt-5",
+                            className="mb-5 mt-5 margin_mobile_large",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
                                    "text-align": "center"},
@@ -54,15 +54,17 @@ kan store og små vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
                         )
-                ]),
+                    ],
+                    className="m_top_lg m_bot_md"
+                ),  # Banner first col closure
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
                     md="10",
-                    className="mb-5"
+                    className="m_top_lg m_bottom_lg"
                 ),
-            ],
+            ],  # Banner row properties
             style={
                 "background-image": "url('/assets/images/lofoten_beach_background_blur.jpg')",
                 "background-repeat": "no-repeat",
@@ -95,7 +97,7 @@ kan store og små vinne kule premier og få belønninger.""",
                                         )
                                     ],
                                     lg=4,
-                                    md=8
+                                    md=10
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
@@ -106,7 +108,7 @@ kan store og små vinne kule premier og få belønninger.""",
                                         ),
                                     ],
                                     lg=4,
-                                    md=8
+                                    md=10
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
