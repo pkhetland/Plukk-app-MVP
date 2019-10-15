@@ -229,7 +229,7 @@ plastavfallet befinner seg i dag.
                  (Slapp av, vi sender bare \
                  nyttig innhold.)""",
                        className="mb-4",
-                       style={"color": "#0cc3c9"}),
+                       style={"color": "#25b8b0"}),
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=8,

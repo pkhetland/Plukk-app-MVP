@@ -4,9 +4,6 @@
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/layout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/about_card.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/about_card.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/about_card_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/about_card_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/about_card_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/about_card_3.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +217,7 @@
       <workItem from="1571071284194" duration="442000" />
       <workItem from="1571135713825" duration="193000" />
       <workItem from="1571137624149" duration="19000" />
-      <workItem from="1571146004979" duration="3843000" />
+      <workItem from="1571146004979" duration="4101000" />
     </task>
     <servers />
   </component>
