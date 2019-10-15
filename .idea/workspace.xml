@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/newrelic.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/.ipynb_checkpoints/conn_test-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test/.ipynb_checkpoints/conn_test-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/conn_test.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/test/conn_test.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -214,6 +217,8 @@
       <workItem from="1571055082537" duration="173000" />
       <workItem from="1571057083438" duration="468000" />
       <workItem from="1571068104229" duration="127000" />
+      <workItem from="1571071284194" duration="442000" />
+      <workItem from="1571135713825" duration="8000" />
     </task>
     <servers />
   </component>
