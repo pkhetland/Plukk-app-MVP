@@ -49,8 +49,8 @@ body = dbc.Container(  # Main container
                         ),
                         html.P(
                             """\
-PLUKK gjør det morsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
-og egne poser kan store og små konkurrere mot venner, samarbeide, \
+PLUKK gjør det lønnsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
+og egne poser kan store og små \
 vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
@@ -157,8 +157,8 @@ vinne kule premier og få belønninger.""",
                                 html.P(
                                     """\
 PLUKK kommer med mange kule funksjoner som eget poengsystem, felles events, \
-personlige utfordringer, lederlister og et skattekart som viser hvor plastavfallet befinner\
- seg i dag.
+personlige utfordringer, lederlister og et skattekart som viser hvor \
+plastavfallet befinner seg i dag.
 \nHer er noen eksempler:""",
                                     style={"text-align": "center",
                                            "color": "silver"},
@@ -229,10 +229,10 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
                  (Slapp av, vi sender bare \
                  nyttig innhold.)""",
                        className="mb-4",
-                       style={"color": "teal"}),
+                       style={"color": "#0cc3c9"}),
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
-                lg=6,
+                lg=8,
                 md=8,
                 style={"color": "white",
                        "font-size": "1.2rem"},
@@ -247,6 +247,33 @@ personlige utfordringer, lederlister og et skattekart som viser hvor plastavfall
         ),
         dbc.Row(
             [  # Story row
+                dbc.Col([  # Feedback col
+                    html.H2("Har du spørsmål eller innspill til PLUKK?",
+                            style={"color": "#ffcc00"},
+                            className="mt-5 mr-3 mb-3"),
+                    html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
+                    Vi gleder oss til å høre fra deg.
+                    """,
+                           style={"color": "#D6D6D6",
+                                  "font-family": "courier"},),
+                    html.A([
+                        dbc.Button("Send oss en e-post",
+                                   color="dark",
+                                   size="lg",
+                                   style={"text-align": "center"},
+                                   className="mb-5")
+                        ],
+                        href='mailto:innspill@plukkappen.no',
+                        className='mt-3 mb-3'),
+                ],
+                    lg=8,
+                    md=8,
+                    className="mb-5 mt-5",
+                    style={"text-align": "center",
+                           "border": "dashed",
+                           "border-size": "0px 0px 0px 2px",
+                           "border-color": "#3b3b3b"}
+                ),  # Feedback col properties
                 dbc.Col([
                     html.H2("Historien bak PLUKK",
                             className="mb-5 mt-5",
@@ -287,7 +314,8 @@ Dette er PLUKK.
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
                 "background-attachment": "fixed",
-                "color": "#fafafa"
+                "color": "#fafafa",
+                "font-family": "courier new"
             },
             align="center",
             justify="around",
