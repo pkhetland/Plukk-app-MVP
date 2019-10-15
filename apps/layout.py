@@ -42,7 +42,7 @@ body = dbc.Container(  # Main container
                     children=[
                         html.H1(
                             "PLUKK.",
-                            className="mb-5 mt-5 margin_mobile_large",
+                            className="mb-5 mt-5",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
                                    "text-align": "center"},
@@ -55,14 +55,14 @@ kan store og små vinne kule premier og få belønninger.""",
                                    "text-align": "center"},
                         )
                     ],
-                    className="m_top_lg m_bot_md"
+                    className="m_top_lg"
                 ),  # Banner first col closure
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
                     md="10",
-                    className="m_top_md m_bottom_lg"
+                    className="m_top_lg m_bottom_lg"
                 ),
             ],  # Banner row properties
             style={
