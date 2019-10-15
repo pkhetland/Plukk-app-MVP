@@ -370,18 +370,18 @@ h1, h2, h3, h4, h5, h6,
 
 @media (max-width: 992px) {
   .m_top_lg {
-    margin-top: 7rem;
+    margin-top: 10rem;
   }
   .m_top_md {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .m_bottom_lg {
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
   }
 
   .m_bottom_md {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 }
 

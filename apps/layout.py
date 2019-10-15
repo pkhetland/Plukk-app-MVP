@@ -62,7 +62,7 @@ kan store og små vinne kule premier og få belønninger.""",
                               width="100%")],
                     lg="5",
                     md="10",
-                    className="m_top_lg m_bottom_lg"
+                    className="m_top_md m_bottom_lg"
                 ),
             ],  # Banner row properties
             style={
