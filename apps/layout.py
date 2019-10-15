@@ -49,9 +49,8 @@ body = dbc.Container(  # Main container
                         ),
                         html.P(
                             """\
-PLUKK gjør det lønnsomt å plukke søppel.\n Med din egen QR-kode, en mobil \
-og egne poser kan store og små \
-vinne kule premier og få belønninger.""",
+PLUKK gjør det lønnsomt å plukke søppel.\n Med en PLUKKpose med QR-kode og en mobil \
+kan store og små vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
                         )
@@ -118,7 +117,7 @@ vinne kule premier og få belønninger.""",
                                         ),
                                     ],
                                     lg=4,
-                                    md=8
+                                    md=10
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
@@ -233,7 +232,7 @@ plastavfallet befinner seg i dag.
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=8,
-                md=8,
+                md=10,
                 style={"color": "white",
                        "font-size": "1.2rem"},
                 className="mt-5 mb-5"
@@ -267,7 +266,7 @@ plastavfallet befinner seg i dag.
                         className='mt-3 mb-3'),
                 ],
                     lg=8,
-                    md=8,
+                    md=12,
                     className="mb-5 mt-5",
                     style={"text-align": "center",
                            "border": "dashed",
@@ -289,7 +288,7 @@ Dette er PLUKK.
                            """)
                      ],  # Story first col
                     lg=5,
-                    md=9,
+                    md=10,
                     align="center",
                     style={"text-align": "left",
                            "color": "#D6D6D6"},
