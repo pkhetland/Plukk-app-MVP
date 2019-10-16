@@ -254,7 +254,8 @@ plastavfallet befinner seg i dag.
             [  # Story row
                 dbc.Col([  # Feedback col
                     html.H3("Har du spørsmål eller innspill til PLUKK?",
-                            style={"color": "#ffcc00"},
+                            style={"color": "#ffcc00",
+                                   "text-shadow": "0px 2px black"},
                             className="mt-5 mr-3 ml-3"),
                     html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
                     Vi gleder oss til å høre fra deg.
