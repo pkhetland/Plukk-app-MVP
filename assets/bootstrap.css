@@ -248,6 +248,17 @@ textarea {
   line-height: inherit;
 }
 
+@media (max-width: 992px) {
+  #submit_main_form, #email_button {
+    font-size: 2.5rem;
+    font-family: courier;
+  }
+
+  #main_form_name, #main_form_email {
+    font-size: 2rem;
+  }
+}
+
 button,
 input {
   overflow: visible;

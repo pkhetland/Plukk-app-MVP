@@ -6,22 +6,25 @@ import dash_html_components as html
 
 main_form_body = dbc.Form([  # Signup form
     dbc.FormGroup([  # First name input
-        html.P("Navn"),
+        html.P("Navn", style={"font-family": "courier"}),
         dbc.Input(type="text",
                   id="main_form_name",
                   placeholder="Skriv inn navnet ditt...",
                   style={"width": "80%",
-                         "box-shadow": "0px 2px black"})
+                         "box-shadow": "0px 2px black"},
+                  className="m_bottom_md")
     ]),
     dbc.FormGroup([
-        html.P("E-postadresse"),
-        dbc.Input(type="email", id="main_form_email",
+        html.P("E-postadresse", style={"font-family": "courier"}),
+        dbc.Input(type="email",
+                  id="main_form_email",
                   placeholder="Skriv inn e-posten din...",
                   style={"width": "80%",
                          "box-shadow": "0px 2px black",
-                         "size": "3rem"})
+                         "size": "3rem"},
+                  className="m_bottom_md")
     ]),
-    html.P("", id="main_form_output", style={"color": "orange"}),
+    html.P("", id="main_form_output", style={"color": "orange"}, className="m_bottom_md"),
     dbc.Button("Send inn",
                color="warning",
                className="mt-4 mb-2 p",
@@ -250,20 +253,22 @@ plastavfallet befinner seg i dag.
         dbc.Row(
             [  # Story row
                 dbc.Col([  # Feedback col
-                    html.H2("Har du spørsmål eller innspill til PLUKK?",
+                    html.H3("Har du spørsmål eller innspill til PLUKK?",
                             style={"color": "#ffcc00"},
-                            className="mt-5 mr-3 mb-3"),
+                            className="mt-5 mr-3 ml-3"),
                     html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
                     Vi gleder oss til å høre fra deg.
                     """,
                            style={"color": "#D6D6D6",
-                                  "font-family": "courier"},),
+                                  "font-family": "courier"},
+                           className="m_bottom_md m_top_md"),
                     html.A([
                         dbc.Button("Send oss en e-post",
                                    color="dark",
                                    size="lg",
                                    style={"text-align": "center"},
-                                   className="mb-5")
+                                   className="mb-5",
+                                   id="email_button")
                         ],
                         href='mailto:innspill@plukkappen.no',
                         className='mt-3 mb-3'),
