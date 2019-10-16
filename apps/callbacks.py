@@ -23,7 +23,7 @@ def form_response(n_clicks, main_form_name, main_form_email):
         else:
             userdict = {'name': [main_form_name], 'email': [main_form_email]}
             df = pd.DataFrame(userdict)
-            df.to_sql('plukk_contacts', engine, if_exists='append')
+            df.to_sql('plukk_contacts', engine, if_exists='append', index=True)
             return "Hurra! Du har spennende tider i vente."
             # return str(pd.read_sql_table('contacts', engine))
 
