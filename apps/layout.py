@@ -84,7 +84,7 @@ kan store og små vinne kule premier og få belønninger.""",
                                 html.H2("Slik fungerer PLUKK.", style={"text-align": "center"})
                             ],
                             width=12,
-                            className="mb-5 mt-5",
+                            className="m_top_lg m_bottom_md",
                         ),
                         dbc.Row(
                             [  # Main col: Row for cards
@@ -128,13 +128,13 @@ kan store og små vinne kule premier og få belønninger.""",
                             className="mb-5"
                         ),  # Card row closing parantheses
                     ],
-                    className="mt-5"  # Properties of about-col
+                    className="mt-5 m_bottom_lg"  # Properties of about-col
                 )  # About col closure
             ],  # Properties of about-row
             style={"min-height": "700px",
                    "background-color": "#fafafa"},
             align="center",
-            justify="center",
+            justify="center"
         ),  # About row closure
         dbc.Row(
             [  # Feature-row
@@ -151,7 +151,7 @@ kan store og små vinne kule premier og få belønninger.""",
                                 )
                             ],
                             width=12,
-                            className="mt-5 mb-3",
+                            className="m_top_lg m_bottom_md",
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
@@ -199,7 +199,8 @@ plastavfallet befinner seg i dag.
                                         )
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=10,
+                                    className="m_bottom_lg"
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
@@ -222,14 +223,14 @@ plastavfallet befinner seg i dag.
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
                 html.H2("Bli først til å teste PLUKK!",
-                        className="mb-4 mt-5",
+                        className="m_bottom_md",
                         style={"text-shadow": "0px 2px black"}),
                 html.P("""Fyll ut skjemaet under for å få informasjon om\
                  utviklingen av Plukk eller være én av\
                  de første til å teste appen. 
                  (Slapp av, vi sender bare \
                  nyttig innhold.)""",
-                       className="mb-4",
+                       className="m_bottom_md",
                        style={"color": "#25b8b0"}),
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
@@ -237,7 +238,7 @@ plastavfallet befinner seg i dag.
                 md=10,
                 style={"color": "white",
                        "font-size": "1.2rem"},
-                className="mt-5 mb-5"
+                className="m_bottom_lg m_top_lg"
             )
         ],  # Signup row properties
             align="center",
@@ -268,11 +269,11 @@ plastavfallet befinner seg i dag.
                         className='mt-3 mb-3'),
                 ],
                     lg=8,
-                    md=12,
-                    className="mb-5 mt-5",
+                    md=11,
+                    className="m_top_lg m_bottom_lg",
                     style={"text-align": "center",
                            "border": "dashed",
-                           "border-size": "0px 0px 0px 2px",
+                           "border-size": "4px",
                            "border-color": "#3b3b3b"}
                 ),  # Feedback col properties
                 dbc.Col([
@@ -310,7 +311,7 @@ Dette er PLUKK.
                 # Closing parantheses of Story row
             ],
             style={
-                "min-height": "700px",
+                "min-height": "1000px",
                 "background-image": "url('/assets/images/green_background.png')",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
