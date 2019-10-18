@@ -37,7 +37,7 @@ main_form_body = dbc.Form([  # Signup form
 body = dbc.Container(  # Main container
     fluid=True,
     children=[
-        html.Div("""
+        html.Header("""
         <!-- Facebook Pixel Code -->
         <script>
           !function(f,b,e,v,n,t,s)
@@ -72,7 +72,7 @@ body = dbc.Container(  # Main container
                         html.P(
                             """\
 PLUKK gjør det lønnsomt å plukke søppel.\n Med en PLUKKpose med QR-kode og en mobil \
-kan store og små vinne kule premier og få belønninger.""",
+kan store og små dra ut på eventyr for å vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center"},
                         )
