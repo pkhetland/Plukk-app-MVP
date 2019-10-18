@@ -417,7 +417,7 @@ Takk!
                 style={"color": "white",
                        "font-size": "0.5rem",
                        "text-shadow": "0px 1px black"},
-                className="mt-5 mb-5 ml-5",
+                className="mt-5 mb-5 ml-5 mr-5",
             )
         ],
             align="center",
@@ -434,6 +434,7 @@ Takk!
             ],
                 lg=2,
                 md=4,
+                sm=4,
                 align="end",
                 className="mb-5 mr-5 ml-5"
             )

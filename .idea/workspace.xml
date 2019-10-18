@@ -4,7 +4,6 @@
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/layout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -225,7 +224,7 @@
       <workItem from="1571248206326" duration="872000" />
       <workItem from="1571251608395" duration="82000" />
       <workItem from="1571384965567" duration="16190000" />
-      <workItem from="1571429168667" duration="1062000" />
+      <workItem from="1571429168667" duration="1191000" />
     </task>
     <servers />
   </component>
