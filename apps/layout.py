@@ -15,7 +15,7 @@ main_form_body = dbc.Form([  # Signup form
                   className="m_bottom_md")
     ]),
     dbc.FormGroup([
-        html.P("E-postadresse", style={"font-family": "courier"}),
+        html.P("E-postadresse*", style={"font-family": "courier"}),
         dbc.Input(type="email",
                   id="main_form_email",
                   placeholder="Skriv inn e-posten din...",
@@ -25,7 +25,7 @@ main_form_body = dbc.Form([  # Signup form
                   className="m_bottom_md")
     ]),
     html.P("", id="main_form_output", style={"color": "orange"}, className="m_bottom_md"),
-    dbc.Button("Send inn",
+    dbc.Button("Send inn!",
                color="warning",
                className="mt-4 mb-2 p",
                style={"box-shadow": "0px 2px black"},
@@ -69,7 +69,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                 ),
             ],  # Banner row properties
             style={
-                "background-image": "url('/assets/images/lofoten_beach_background_blur.jpg')",
+                "background-image": "url('/assets/images/lofoten_beach_"
+                                    "background_blur.png')",
                 "background-repeat": "no-repeat",
                 "background-size": "cover",
                 "background-attachment": "fixed",
@@ -84,7 +85,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                     [
                         dbc.Col(
                             [  # Main col: Heading
-                                html.H2("Slik fungerer PLUKK.", style={"text-align": "center"})
+                                html.H2("Slik fungerer PLUKK.",
+                                        style={"text-align": "center"})
                             ],
                             width=12,
                             className="m_top_lg m_bottom_md",
@@ -158,14 +160,15 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
-                                html.P(
+                                html.Div(
                                     """\
 PLUKK kommer med mange kule funksjoner som eget poengsystem, felles events, \
 personlige utfordringer, lederlister og et skattekart som viser hvor \
 plastavfallet befinner seg i dag.
 \nHer er noen eksempler:""",
                                     style={"text-align": "center",
-                                           "color": "silver"},
+                                           "color": "silver",
+                                           "font-familt": "Courier New"},
                                     className="mt-5 mb-5",
                                 )
                             ],
@@ -228,11 +231,9 @@ plastavfallet befinner seg i dag.
                 html.H2("Bli først til å teste PLUKK!",
                         className="m_bottom_md",
                         style={"text-shadow": "0px 2px black"}),
-                html.P("""Fyll ut skjemaet under for å få informasjon om\
-                 utviklingen av Plukk eller være én av\
-                 de første til å teste appen. 
-                 (Slapp av, vi sender bare \
-                 nyttig innhold.)""",
+                html.P("""Bli betatester og vær førstemann til å få \
+                oppdateringer om appen.\n
+                 (Slapp av, vi sender bare kult innhold.)""",
                        className="m_bottom_md",
                        style={"color": "#25b8b0"}),
                 main_form_body  # Gets the form body from resources.py
@@ -328,6 +329,116 @@ Dette er PLUKK.
             align="center",
             justify="around",
             # Footer row properties
-        )
+        ),  # Footer row closure
+        dbc.Row([
+            dbc.Col([
+                html.H3("Kontakt oss:",
+                        style={"font-size": "1rem",
+                               "color": "#ea6621",
+                               "font-weight": "bold"}),
+                html.A(html.P("- Send oss en e-post",
+                              style={"font-size": "1rem",
+                                     "color": "silver",
+                                     "font-weight": "bold"},
+                              className="mt-2"),
+                       href="mailto:Innspill@plukkappen.no",
+                       target="_blank"),
+                html.A(html.P("- Send oss en melding på Facebook",
+                              style={"font-size": "1rem",
+                                     "color": "silver",
+                                     "font-weight": "bold"},
+                              className="mt-2"),
+                       href="https://www.facebook.com/plukkappen/",
+                       target="_blank"),
+                html.H3("Personvernerklæring:",
+                        style={"font-size": "1rem",
+                               "color": "#ea6621",
+                               "font-weight": "bold"},
+                        className="mt-5"),
+                html.P("Denne tjenesten er eid av Bouvet AS og "
+                       "blir dekket av deres personvernerklæring.",
+                       style={"font-size": "1rem",
+                              "color": "silver"}),
+                html.A(html.P("- Les personvernerklæringen her",
+                       style={"font-size": "1rem",
+                              "color": "silver",
+                              "font-weight": "bold"}),
+                       href="https://www.bouvet.no/om-bouvet/"
+                            "informasjonskapsler-og-personvern",
+                       target="_blank"),
+                html.Div([
+                    dbc.Button("* Hva gjør vi med dataen du sender inn? "
+                               "Les mer her.",
+                               id="open",
+                               outline=True,
+                               color="warning",
+                               className="mt-5",
+                               style={"font-family": "Courier",
+                                      "font-size": "0.8rem"}),
+                    dbc.Modal(
+                        [
+                            dbc.ModalHeader("Databehandling"),
+                            dbc.ModalBody(
+                                html.Div([html.P(["""\
+De eneste dataene vi samler inn \
+fra deg er navnet du skriver inn og e-posten din. \
+Disse bruker vi til å måle interessen for produktet, \
+og vises ikke til noen utenfor teamet vårt.\n
+Alle data slettes 2 måneder etter innsamling.\n
+PLUKK er et samarbeid mellom studenter ved NMBU og Bouvet. \
+Dersom du har spørsmål eller ønsker at dine data \
+skal slettes, kan du kontakte oss via vår ansvarlige \
+kontaktperson ved NMBU:\n
+Petter Kolstad Hetland \n
+Mobil: 978 87 892 \n
+E-post: Pehe@nmbu.no\n
+Takk!
+                            """],
+                                                 style={"font-size": "1rem"})
+                                          ])
+                                         ),
+                            dbc.ModalFooter(
+                                dbc.Button("Lukk vinduet",
+                                           id="close",
+                                           className="ml-auto",
+                                           style={"font-family": "Courier"})
+                            ),
+                        ],
+                        id="modal",
+                        style={"min-width": "70%",
+                               "white-space": "pre-line"}
+                    )
+                ])
+            ],
+                lg=5,
+                md=8,
+                style={"color": "white",
+                       "font-size": "0.5rem",
+                       "text-shadow": "0px 1px black"},
+                className="mt-5 mb-5 ml-5",
+            )
+        ],
+            align="center",
+            justify="start",
+            style={"min-height": "200px",
+                   "background-color": "#3b3b3b"}
+        ),  # Footer contact info closure
+        dbc.Row([  # Footer logo
+            dbc.Col([
+                html.A([html.Img(src="/assets/images/bouvet_logo.png",
+                         width="100%")],
+                       href="https://www.bouvet.no",
+                       target="_blank")
+            ],
+                lg=2,
+                md=4,
+                align="end",
+                className="mb-5 mr-5 ml-5"
+            )
+        ],
+            align="center",
+            justify="end",
+            style={"background-color": "#3b3b3b"}
+        )  # Footer logo closure
     ]  # Container children closure
 )  # Container end bracket
