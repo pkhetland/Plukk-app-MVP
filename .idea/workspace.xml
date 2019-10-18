@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/lofoten_beach_background.psd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/layout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/bootstrap.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -224,7 +225,7 @@
       <workItem from="1571248206326" duration="872000" />
       <workItem from="1571251608395" duration="82000" />
       <workItem from="1571384965567" duration="16190000" />
-      <workItem from="1571429168667" duration="43000" />
+      <workItem from="1571429168667" duration="507000" />
     </task>
     <servers />
   </component>
@@ -256,7 +257,7 @@
     <SUITE FILE_PATH="coverage/plukk_app_mvp$manage.coverage" NAME="manage Coverage Results" MODIFIED="1570977119549" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/plukk_app_mvp$app.coverage" NAME="app Coverage Results" MODIFIED="1570977139415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/plukk_app_mvp$index.coverage" NAME="index Coverage Results" MODIFIED="1571035720990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/plukk_app_mvp$index__2_.coverage" NAME="index (2) Coverage Results" MODIFIED="1571413073565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/plukk_app_mvp$index__2_.coverage" NAME="index (2) Coverage Results" MODIFIED="1571429597647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/plukk_app_mvp$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1571035679223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/apps" />
   </component>
 </project>
