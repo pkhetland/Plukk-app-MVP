@@ -48,7 +48,8 @@ body = dbc.Container(  # Main container
                             className="mb-5 mt-5",
                             style={"color": "white",
                                    "text-shadow": "0px 3px black",
-                                   "text-align": "center"},
+                                   "text-align": "center",
+                                   "font-size": "4rem"},
                         ),
                         html.P(
                             """\
@@ -147,7 +148,7 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                     [
                         dbc.Col(
                             [  # Main col: Heading
-                                html.H2(
+                                html.H1(
                                     "Hva kan du glede deg til?",
                                     style={"text-align": "center",
                                            "color": "white",
@@ -228,13 +229,13 @@ plastavfallet befinner seg i dag.
         ),  # Feature row closing parantheses
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
-                html.H2("Bli først til å teste PLUKK!",
+                html.H1("Bli først til å teste PLUKK!",
                         className="m_bottom_md",
                         style={"text-shadow": "0px 2px black"}),
                 html.P("""Bli betatester og vær førstemann til å få \
                 oppdateringer om appen.\n
                  (Slapp av, vi sender bare kult innhold.)""",
-                       className="m_bottom_md",
+                       className="mt-5 mb-5",
                        style={"color": "#25b8b0"}),
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
@@ -242,7 +243,7 @@ plastavfallet befinner seg i dag.
                 md=10,
                 style={"color": "white",
                        "font-size": "1.2rem"},
-                className="m_bottom_lg m_top_lg"
+                className="mt-4"
             )
         ],  # Signup row properties
             align="center",
@@ -254,7 +255,7 @@ plastavfallet befinner seg i dag.
         dbc.Row(
             [  # Story row
                 dbc.Col([  # Feedback col
-                    html.H3("Har du spørsmål eller innspill til PLUKK?",
+                    html.H2("Har du spørsmål eller innspill til PLUKK?",
                             style={"color": "#ffcc00",
                                    "text-shadow": "0px 2px black"},
                             className="mt-5 mr-3 ml-3"),
@@ -280,11 +281,11 @@ plastavfallet befinner seg i dag.
                     className="m_top_lg m_bottom_lg",
                     style={"text-align": "center",
                            "border": "dashed",
-                           "border-size": "4px",
+                           "border-size": "8px",
                            "border-color": "#3b3b3b"}
                 ),  # Feedback col properties
                 dbc.Col([
-                    html.H2("Historien bak PLUKK",
+                    html.H1("Historien bak PLUKK",
                             className="mb-5 mt-5",
                             style={"text-shadow": "0px 2px black"}),
                     html.P(
@@ -332,8 +333,8 @@ Dette er PLUKK.
         ),  # Footer row closure
         dbc.Row([
             dbc.Col([
-                html.H3("Kontakt oss:",
-                        style={"font-size": "1rem",
+                html.H2("Kontakt oss:",
+                        style={"font-size": "1.2rem",
                                "color": "#ea6621",
                                "font-weight": "bold"}),
                 html.A(html.P("- Send oss en e-post",
@@ -350,8 +351,8 @@ Dette er PLUKK.
                               className="mt-2"),
                        href="https://www.facebook.com/plukkappen/",
                        target="_blank"),
-                html.H3("Personvernerklæring:",
-                        style={"font-size": "1rem",
+                html.H2("Personvernerklæring:",
+                        style={"font-size": "1.2rem",
                                "color": "#ea6621",
                                "font-weight": "bold"},
                         className="mt-5"),
@@ -411,7 +412,8 @@ Takk!
                 ])
             ],
                 lg=5,
-                md=8,
+                md=10,
+                sm=10,
                 style={"color": "white",
                        "font-size": "0.5rem",
                        "text-shadow": "0px 1px black"},
@@ -440,5 +442,6 @@ Takk!
             justify="end",
             style={"background-color": "#3b3b3b"}
         )  # Footer logo closure
-    ]  # Container children closure
+    ],
+    style={"font-family": "Courier New"}  # Container children closure
 )  # Container end bracket

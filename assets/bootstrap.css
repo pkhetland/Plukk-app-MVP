@@ -377,7 +377,7 @@ h1, h2, h3, h4, h5, h6,
   font-weight: 500;
   line-height: 1.2;
 }
-
+/*
 @media (max-width: 992px) {
   .m_top_lg {
     margin-top: 10rem;
@@ -394,6 +394,8 @@ h1, h2, h3, h4, h5, h6,
     margin-bottom: 5rem;
   }
 }
+*/
+
 /*
 @media (min-width: 992px) {
 
