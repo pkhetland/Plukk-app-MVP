@@ -160,7 +160,7 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
-                                html.Div(
+                                html.P(
                                     """\
 PLUKK kommer med mange kule funksjoner som eget poengsystem, felles events, \
 personlige utfordringer, lederlister og et skattekart som viser hvor \
