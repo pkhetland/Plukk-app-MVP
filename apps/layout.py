@@ -168,7 +168,7 @@ plastavfallet befinner seg i dag.
 \nHer er noen eksempler:""",
                                     style={"text-align": "center",
                                            "color": "silver",
-                                           "font-familt": "Courier New"},
+                                           "font-family": "Courier New"},
                                     className="mt-5 mb-5",
                                 )
                             ],
