@@ -43,7 +43,8 @@ body = dbc.Container(  # Main container
             [  # Banner first row
                 dbc.Col(  # Banner first column
                     lg=4,
-                    md=10,
+                    md=8,
+                    sm=8,
                     children=[
                         html.H1(
                             "PLUKK.",
@@ -58,7 +59,8 @@ body = dbc.Container(  # Main container
 PLUKK gjør det lønnsomt å plukke søppel.\n Med en PLUKKpose med QR-kode og en mobil \
 kan store og små dra ut på eventyr for å vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
-                                   "text-align": "center"},
+                                   "text-align": "center",
+                                   "font-size": "1.4rem"},
                         )
                     ],
                     className="m_top_lg"
@@ -89,8 +91,10 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                     [
                         dbc.Col(
                             [  # Main col: Heading
-                                html.H2("Slik fungerer PLUKK.",
-                                        style={"text-align": "center"})
+                                html.H1("Slik fungerer PLUKK.",
+                                        style={"text-align": "center",
+                                               "color": "rgba(0,0,0,0.8)",
+                                               "text-shadow": "0px 1px gray"})
                             ],
                             width=12,
                             className="m_top_lg m_bottom_md",
@@ -106,7 +110,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                                         )
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=8,
+                                    sm=8,
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
@@ -117,7 +122,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                                         ),
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=8,
+                                    sm=8,
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
@@ -128,7 +134,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                                         ),
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=8,
+                                    sm=8,
                                 ),  # Third card col closing parantheses
                             ],
                             justify="around",
@@ -141,7 +148,10 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                 )  # About col closure
             ],  # Properties of about-row
             style={"min-height": "700px",
-                   "background-color": "#fafafa"},
+                   "background-image": "url('/assets/images/"
+                                       "paper_background_3.jpg')",
+                   "background-size": "cover"
+                   },
             align="center",
             justify="center"
         ),  # About row closure
@@ -172,12 +182,14 @@ plastavfallet befinner seg i dag.
 \nHer er noen eksempler:""",
                                     style={"text-align": "center",
                                            "color": "silver",
-                                           "font-family": "Courier New"},
+                                           "font-family": "Courier New",
+                                           "font-size": "1.4rem"},
                                     className="mt-5 mb-5",
                                 )
                             ],
                             lg={"size": 6, "offset": 3},
-                            md={"size": 10, "offset": 1},
+                            md={"size": 8, "offset": 2},
+                            sm={"size": 8, "offset": 2},
                             className="mb-5",
                         ),
                         dbc.Row(
@@ -280,7 +292,8 @@ plastavfallet befinner seg i dag.
                         Vi gleder oss til å høre fra deg.
                         """,
                                style={"color": "#F6F6F6",
-                                      "font-family": "courier new"},
+                                      "font-family": "courier new",
+                                      "text-shadow": "0px 1px black"},
                                className="m_bottom_md m_top_md"),
                         html.A([
                             dbc.Button("Send oss en e-post",
@@ -323,7 +336,8 @@ Dette er PLUKK.
                     md=10,
                     align="center",
                     style={"text-align": "left",
-                           "color": "#D6D6D6"},
+                           "color": "#D6D6D6",
+                           "text-shadow": "0px 1px black"},
                     className="mb-5 mt-5"
                 ),
                 dbc.Col(  # Story second col

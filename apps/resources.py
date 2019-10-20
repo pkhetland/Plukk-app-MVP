@@ -57,7 +57,8 @@ q1 = html.Tr([
     html.Td([
         html.H3("Hvor kan jeg levere de fulle posene?",
                 style={"color": "#F6F6F6",
-                       "text-shadow": "0px 1px black"},
+                       "text-shadow": "0px 1px black",
+                       "text-align": "left"},
                 className="mt-2"),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
@@ -66,11 +67,11 @@ q1 = html.Tr([
                 "dine på et mottak som sorterer restavfall, plast og resirkulerbar "
                 "havplast. \nSlik skaper vi mest verdi med innsatsen vår."
                 "\nDu kan selvfølgelig også kaste posene i "
-                "nærmeste søppelbøtte mot en lavere poengsum. "
+                "nærmeste restavfall mot en lavere poengsum. "
                 "\nAlle tiltak bidrar mot en renere kystlinje for mennesker og dyreliv!"
             ),
                 style={
-                    "background-image": "url('/assets/images/paper_background_2.jpg')",
+                    "background-image": "url('/assets/images/paper_background_3.jpg')",
                     "background-size": "cover",
                     "color": "rgba(0, 0, 0, 0.80)",
                     "font-family": "courier"}
@@ -96,7 +97,8 @@ q2 = html.Tr([
     html.Td([
         html.H3("Hvor finner jeg PLUKKposer?",
                 style={"color": "#F6F6F6",
-                       "text-shadow": "0px 1px black"},
+                       "text-shadow": "0px 1px black",
+                       "text-align": "left"},
                 className="mt-2"),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
@@ -107,7 +109,7 @@ q2 = html.Tr([
                 "\n - Bestilles på nett helt gratis."
             ),
                 style={
-                    "background-image": "url('/assets/images/paper_background_2.jpg')",
+                    "background-image": "url('/assets/images/paper_background_3.jpg')",
                     "background-size": "cover",
                     "color": "rgba(0, 0, 0, 0.80)",
                     "font-family": "courier"
@@ -126,7 +128,8 @@ q2 = html.Tr([
                 "Se svaret",
                 id="q2_collapse_button",
                 size="md",
-                color="dark")
+                color="dark"
+            )
         ])
     ])
 ])
@@ -135,7 +138,7 @@ faq_table_body = [html.Tbody([q1, q2])]
 
 faq_table = dbc.Table(faq_table_body,
                       bordered=False, hover=True,
-                      striped=True, responsive="md",
+                      striped=True, responsive=True,
                       size="lg",
                       borderless=True)
 
