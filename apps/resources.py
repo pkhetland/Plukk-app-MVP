@@ -58,7 +58,7 @@ q1 = html.Tr([
         html.H3("Hvor kan jeg levere de fulle posene?",
                 style={"color": "#F6F6F6",
                        "text-shadow": "0px 1px black"},
-                className="mt-2"),
+                className=""),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
                 "Det velger du helt selv.\n\n"
@@ -76,7 +76,7 @@ q1 = html.Tr([
                     "font-family": "courier"}
             ),
             id="q1_collapse",
-            className="mt-4 mb-2",
+            className="mt-3 mb-2",
             style={"white-space": "pre-line"}
         ),
         dbc.Button(
@@ -84,7 +84,7 @@ q1 = html.Tr([
             id="q1_collapse_button",
             size="md",
             color="dark",
-            className="mt-3 mb-2"
+            className="mt-1"
         )
     ]),
 
@@ -95,11 +95,11 @@ q2 = html.Tr([
         html.H3("Hvor finner jeg PLUKKposer?",
                 style={"color": "#F6F6F6",
                        "text-shadow": "0px 1px black"},
-                className="mt-2"),
+                className=""),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
                 "Posene kommer til å være tilgjengelige "
-                "flere steder. \nDe kan:"
+                "flere steder. \n\nDe kan:"
                 "\n - Hentes på nærbutikken din"
                 "\n - Hentes i dispensere ved en rekke strender og naturområder"
                 "\n - Bestilles på nett helt gratis."
@@ -113,7 +113,7 @@ q2 = html.Tr([
                 }
             ),
             id="q2_collapse",
-            className="mt-5 mb-4",
+            className="mt-3 mb-2",
             style={"white-space": "pre-line",
                    "color": "#E63b3b3b"}
         ),
@@ -122,7 +122,7 @@ q2 = html.Tr([
             id="q2_collapse_button",
             size="md",
             color="dark",
-            className="mt-3 mb-2"
+            className="mt-1"
         )
     ])
 ])
@@ -133,7 +133,8 @@ faq_table = dbc.Table(faq_table_body,
                       bordered=False, hover=True,
                       striped=True, responsive=True,
                       size="lg",
-                      borderless=True)
+                      borderless=True,
+                      style={"width": "100%"})
 
 
 # Callback for faq table q1
