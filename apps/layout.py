@@ -67,7 +67,8 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                     [html.Img(src="/assets/images/three_phones_2.png",
                               width="100%")],
                     lg="5",
-                    md="10",
+                    md="8",
+                    sm="10",
                     className="m_top_lg m_bottom_lg"
                 ),
             ],  # Banner row properties

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfac4946-2bbf-4b8d-9959-092ff46fb80c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/paper_background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/paper_background_2.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/callbacks.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/resources.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/layout.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/layout.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -286,7 +282,7 @@
       <workItem from="1571251608395" duration="82000" />
       <workItem from="1571384965567" duration="16190000" />
       <workItem from="1571429168667" duration="1273000" />
-      <workItem from="1571469247073" duration="8176000" />
+      <workItem from="1571469247073" duration="8293000" />
     </task>
     <servers />
   </component>
