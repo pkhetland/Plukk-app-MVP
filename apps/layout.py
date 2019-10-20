@@ -1,39 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from apps.resources import faq_table
-
-# FORMS
-
-main_form_body = dbc.Form([  # Signup form
-    dbc.FormGroup([  # First name input
-        html.P("Navn", style={"font-family": "courier"}),
-        dbc.Input(type="text",
-                  id="main_form_name",
-                  placeholder="Skriv inn navnet ditt...",
-                  style={"width": "80%",
-                         "box-shadow": "0px 2px black"},
-                  className="m_bottom_md")
-    ]),
-    dbc.FormGroup([
-        html.P("E-postadresse*", style={"font-family": "courier"}),
-        dbc.Input(type="email",
-                  id="main_form_email",
-                  placeholder="Skriv inn e-posten din...",
-                  style={"width": "80%",
-                         "box-shadow": "0px 2px black",
-                         "size": "3rem"},
-                  className="m_bottom_md")
-    ]),
-    html.P("", id="main_form_output", style={"color": "orange"},
-           className="m_bottom_md"),
-    dbc.Button("Send inn!",
-               color="warning",
-               className="mt-4 mb-2 p",
-               style={"box-shadow": "0px 2px black"},
-               id="submit_main_form",
-               size="lg")
-    ])
+from apps.resources import faq_table, main_form_body
 
 
 body = dbc.Container(  # Main container
@@ -94,7 +62,7 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                                 html.H1("Slik fungerer PLUKK.",
                                         style={"text-align": "center",
                                                "color": "rgba(0,0,0,0.8)",
-                                               "text-shadow": "0px 1px gray"})
+                                               "font-family": "courier"})
                             ],
                             width=12,
                             className="m_top_lg m_bottom_md",
@@ -245,13 +213,13 @@ plastavfallet befinner seg i dag.
         dbc.Row([  # Signup row
             dbc.Col([  # First col for signup form
                 html.H1("Bli først til å teste PLUKK!",
-                        className="m_bottom_md",
                         style={"text-shadow": "0px 2px black"}),
                 html.P("""Bli betatester og vær førstemann til å få \
                 oppdateringer om appen.\n
                  (Slapp av, vi sender bare kult innhold.)""",
                        className="mt-5 mb-5",
-                       style={"color": "#25b8b0"}),
+                       style={"color": "#25b8b0",
+                              "font-size": "1.4rem"}),
                 main_form_body  # Gets the form body from resources.py
             ],  # Signup col properties
                 lg=8,
@@ -293,12 +261,13 @@ plastavfallet befinner seg i dag.
                         """,
                                style={"color": "#F6F6F6",
                                       "font-family": "courier new",
-                                      "text-shadow": "0px 1px black"},
+                                      "text-shadow": "0px 1px black",
+                                      "font-size": "1.2rem"},
                                className="m_bottom_md m_top_md"),
                         html.A([
                             dbc.Button("Send oss en e-post",
                                        color="dark",
-                                       size="md",
+                                       size="lg",
                                        style={"text-align": "center"},
                                        className="mb-5",
                                        id="email_button")
@@ -307,7 +276,6 @@ plastavfallet befinner seg i dag.
                             className='mt-3 mb-3'),
                     ],
                         width=12,
-                        className="m_top_lg m_bottom_lg",
                         style={"text-align": "center"}
                     )  # Feedback col properties
                 ],  # FAQ and feedback master col properties
@@ -316,12 +284,15 @@ plastavfallet befinner seg i dag.
                            "border-color": "#3b3b3b",
                            "text-align": "center"},
                     lg=9,
-                    md=11
+                    md=11,
+                    sm=11,
+                    className="mt-5 mb-5"
                 ),  # FAQ and feedback master col closure
                 dbc.Col([
-                    html.H1("Historien bak PLUKK",
-                            className="mb-5 mt-5",
-                            style={"text-shadow": "0px 2px black"}),
+                    html.H2("Historien bak PLUKK",
+                            className="mb-3 mt-5",
+                            style={"text-shadow": "0px 2px black",
+                                   "color": "white"}),
                     html.P(
 """En kald februarnatt i 2019 satte et team fra konsulentselskapet Bouvet seg \
 ned for være med å løse et enormt problem: Plast i havet.\n
@@ -336,6 +307,7 @@ Dette er PLUKK.
                     md=10,
                     align="center",
                     style={"text-align": "left",
+                           "font-size": "1.2rem",
                            "color": "#D6D6D6",
                            "text-shadow": "0px 1px black"},
                     className="mb-5 mt-5"

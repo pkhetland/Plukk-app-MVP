@@ -57,16 +57,15 @@ q1 = html.Tr([
     html.Td([
         html.H3("Hvor kan jeg levere de fulle posene?",
                 style={"color": "#F6F6F6",
-                       "text-shadow": "0px 1px black",
-                       "text-align": "left"},
+                       "text-shadow": "0px 1px black"},
                 className="mt-2"),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
-                "Det velger du helt selv.\n"
+                "Det velger du helt selv.\n\n"
                 "Maksimal poengsum får du dersom du leverer posene "
                 "dine på et mottak som sorterer restavfall, plast og resirkulerbar "
                 "havplast. \nSlik skaper vi mest verdi med innsatsen vår."
-                "\nDu kan selvfølgelig også kaste posene i "
+                "\n\nDu kan selvfølgelig også kaste posene i "
                 "nærmeste restavfall mot en lavere poengsum. "
                 "\nAlle tiltak bidrar mot en renere kystlinje for mennesker og dyreliv!"
             ),
@@ -77,28 +76,25 @@ q1 = html.Tr([
                     "font-family": "courier"}
             ),
             id="q1_collapse",
-            className="mt-4",
-            style={"white-space": "pre-line",
-                   "text-align": "start"}
+            className="mt-4 mb-2",
+            style={"white-space": "pre-line"}
+        ),
+        dbc.Button(
+            "Se svaret",
+            id="q1_collapse_button",
+            size="md",
+            color="dark",
+            className="mt-3 mb-2"
         )
     ]),
-    html.Td([
-        html.Div([
-            dbc.Button(
-                "Se svaret",
-                id="q1_collapse_button",
-                size="md",
-                color="dark")
-        ])
-    ])
+
 ])
 
 q2 = html.Tr([
     html.Td([
         html.H3("Hvor finner jeg PLUKKposer?",
                 style={"color": "#F6F6F6",
-                       "text-shadow": "0px 1px black",
-                       "text-align": "left"},
+                       "text-shadow": "0px 1px black"},
                 className="mt-2"),
         dbc.Collapse(
             dbc.Card(dbc.CardBody(
@@ -109,28 +105,25 @@ q2 = html.Tr([
                 "\n - Bestilles på nett helt gratis."
             ),
                 style={
-                    "background-image": "url('/assets/images/paper_background_3.jpg')",
+                    "background-image": "url('/assets/images/"
+                                        "paper_background_3.jpg')",
                     "background-size": "cover",
                     "color": "rgba(0, 0, 0, 0.80)",
                     "font-family": "courier"
                 }
             ),
             id="q2_collapse",
-            className="mt-4",
+            className="mt-5 mb-4",
             style={"white-space": "pre-line",
-                   "text-align": "start",
                    "color": "#E63b3b3b"}
+        ),
+        dbc.Button(
+            "Se svaret",
+            id="q2_collapse_button",
+            size="md",
+            color="dark",
+            className="mt-3 mb-2"
         )
-    ]),
-    html.Td([
-        html.Div([
-            dbc.Button(
-                "Se svaret",
-                id="q2_collapse_button",
-                size="md",
-                color="dark"
-            )
-        ])
     ])
 ])
 
@@ -167,4 +160,34 @@ def toggle_q2_collapse(n, is_open):
     return is_open
 
 
+# FORMS
+main_form_body = dbc.Form([  # Signup form
+    dbc.FormGroup([  # First name input
+        html.P("Navn", style={"font-family": "courier"}),
+        dbc.Input(type="text",
+                  id="main_form_name",
+                  placeholder="Skriv inn navnet ditt...",
+                  style={"width": "80%",
+                         "box-shadow": "0px 2px black"},
+                  className="m_bottom_md")
+    ]),
+    dbc.FormGroup([
+        html.P("E-postadresse*", style={"font-family": "courier"}),
+        dbc.Input(type="email",
+                  id="main_form_email",
+                  placeholder="Skriv inn e-posten din...",
+                  style={"width": "80%",
+                         "box-shadow": "0px 2px black",
+                         "size": "3rem"},
+                  className="m_bottom_md")
+    ]),
+    html.P("", id="main_form_output", style={"color": "orange"},
+           className="m_bottom_md"),
+    dbc.Button("Send inn!",
+               color="warning",
+               className="mt-4 mb-2",
+               style={"box-shadow": "0px 2px black"},
+               id="submit_main_form",
+               size="lg")
+    ])
 
