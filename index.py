@@ -2,7 +2,7 @@ import dash_html_components as html
 
 from app import app
 from apps import layout
-from apps import callbacks
+from apps import resources
 
 body = layout.body  # Get layout from layout.py
 

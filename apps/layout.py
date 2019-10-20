@@ -1,6 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
+from apps.resources import faq_table
 
 # FORMS
 
@@ -24,7 +25,8 @@ main_form_body = dbc.Form([  # Signup form
                          "size": "3rem"},
                   className="m_bottom_md")
     ]),
-    html.P("", id="main_form_output", style={"color": "orange"}, className="m_bottom_md"),
+    html.P("", id="main_form_output", style={"color": "orange"},
+           className="m_bottom_md"),
     dbc.Button("Send inn!",
                color="warning",
                className="mt-4 mb-2 p",
@@ -253,37 +255,55 @@ plastavfallet befinner seg i dag.
                    "font-family": "Courier New"}
         ),
         dbc.Row(
-            [  # Story row
-                dbc.Col([  # Feedback col
-                    html.H2("Har du spørsmål eller innspill til PLUKK?",
-                            style={"color": "#ffcc00",
-                                   "text-shadow": "0px 2px black"},
-                            className="mt-5 mr-3 ml-3"),
-                    html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
-                    Vi gleder oss til å høre fra deg.
-                    """,
-                           style={"color": "#D6D6D6",
-                                  "font-family": "courier"},
-                           className="m_bottom_md m_top_md"),
-                    html.A([
-                        dbc.Button("Send oss en e-post",
-                                   color="dark",
-                                   size="lg",
-                                   style={"text-align": "center"},
-                                   className="mb-5",
-                                   id="email_button")
-                        ],
-                        href='mailto:innspill@plukkappen.no',
-                        className='mt-3 mb-3'),
-                ],
-                    lg=8,
-                    md=11,
-                    className="m_top_lg m_bottom_lg",
-                    style={"text-align": "center",
-                           "border": "dashed",
-                           "border-size": "8px",
-                           "border-color": "#3b3b3b"}
-                ),  # Feedback col properties
+            [  # Story and FAQ row
+                dbc.Col([  # FAQ and feedback master col
+                    dbc.Col([  # FAQ col
+                        html.H1("Ofte stilte spørsmål:",
+                            style={
+                                "color": "#ea6621",
+                                "text-shadow": "0px 2px black"})
+                    ],
+                        width=12,
+                        className="mt-5"
+                    ),
+                    dbc.Col([
+                        faq_table
+                    ],
+                        width=12),
+                    dbc.Col([  # Feedback col
+                        html.H2("Har du andre spørsmål eller innspill til PLUKK?",
+                                style={"color": "#ffcc00",
+                                       "text-shadow": "0px 2px black"},
+                                className="mt-5 mr-3 ml-3"),
+                        html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
+                        Vi gleder oss til å høre fra deg.
+                        """,
+                               style={"color": "#F6F6F6",
+                                      "font-family": "courier new"},
+                               className="m_bottom_md m_top_md"),
+                        html.A([
+                            dbc.Button("Send oss en e-post",
+                                       color="dark",
+                                       size="md",
+                                       style={"text-align": "center"},
+                                       className="mb-5",
+                                       id="email_button")
+                            ],
+                            href='mailto:innspill@plukkappen.no',
+                            className='mt-3 mb-3'),
+                    ],
+                        width=12,
+                        className="m_top_lg m_bottom_lg",
+                        style={"text-align": "center"}
+                    )  # Feedback col properties
+                ],  # FAQ and feedback master col properties
+                    style={"border": "dashed",
+                           "border-size": "10px",
+                           "border-color": "#3b3b3b",
+                           "text-align": "center"},
+                    lg=9,
+                    md=11
+                ),  # FAQ and feedback master col closure
                 dbc.Col([
                     html.H1("Historien bak PLUKK",
                             className="mb-5 mt-5",
@@ -370,7 +390,7 @@ Dette er PLUKK.
                 html.Div([
                     dbc.Button("* Hva gjør vi med dataen du sender inn? "
                                "Les mer her.",
-                               id="open",
+                               id="open_modal",
                                outline=True,
                                color="warning",
                                className="mt-5",
@@ -400,12 +420,12 @@ Takk!
                                          ),
                             dbc.ModalFooter(
                                 dbc.Button("Lukk vinduet",
-                                           id="close",
+                                           id="close_modal",
                                            className="ml-auto",
                                            style={"font-family": "Courier"})
                             ),
                         ],
-                        id="modal",
+                        id="data_info_modal",
                         style={"min-width": "70%",
                                "white-space": "pre-line"}
                     )
