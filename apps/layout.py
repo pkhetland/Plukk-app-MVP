@@ -1,7 +1,7 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_html_components as html
-from apps.resources import faq_table, main_form_body
+from apps.resources import faq_table, main_form_body, feedback_form_body
 
 
 body = dbc.Container(  # Main container
@@ -10,7 +10,7 @@ body = dbc.Container(  # Main container
         dbc.Row(
             [  # Banner first row
                 dbc.Col(  # Banner first column
-                    lg=4,
+                    lg=5,
                     md=8,
                     sm=8,
                     children=[
@@ -24,14 +24,14 @@ body = dbc.Container(  # Main container
                         ),
                         html.P(
                             """\
-PLUKK gjør det lønnsomt å plukke søppel.\n Med en PLUKKpose med QR-kode og en mobil \
+PLUKK gjør det lønnsomt å plukke søppel.\n Med en PLUKKpose og en mobil \
 kan store og små dra ut på eventyr for å vinne kule premier og få belønninger.""",
                             style={"color": "#D6D6D6",
                                    "text-align": "center",
                                    "font-size": "1.4rem"},
                         )
                     ],
-                    className="m_top_lg"
+                    className=""
                 ),  # Banner first col closure
                 dbc.Col(  # Banner second column
                     [html.Img(src="/assets/images/three_phones_2.png",
@@ -239,10 +239,10 @@ plastavfallet befinner seg i dag.
             [  # Story and FAQ row
                 dbc.Col([  # FAQ and feedback master col
                     dbc.Col([  # FAQ col
-                        html.H1("Ofte stilte spørsmål:",
+                        html.H2("Ofte stilte spørsmål",
                             style={
-                                "color": "#ea6621",
-                                "text-shadow": "0px 2px black"})
+                                "color": "orange",
+                                "text-shadow": "0px 1.5px black"})
                     ],
                         width=12,
                         className="mt-5"
@@ -252,28 +252,27 @@ plastavfallet befinner seg i dag.
                     ],
                         width=12),
                     dbc.Col([  # Feedback col
-                        html.H2("Har du andre spørsmål eller innspill til PLUKK?",
-                                style={"color": "#ffcc00",
-                                       "text-shadow": "0px 2px black"},
-                                className="mt-5 mr-3 ml-3"),
-                        html.P("""Ta kontakt med oss på Innspill@plukkappen.no!\n
-                        Vi gleder oss til å høre fra deg.
-                        """,
-                               style={"color": "#F6F6F6",
-                                      "font-family": "courier new",
-                                      "text-shadow": "0px 1px black",
-                                      "font-size": "1.2rem"},
-                               className="m_bottom_md m_top_md"),
-                        html.A([
-                            dbc.Button("Send oss en e-post",
-                                       color="dark",
-                                       size="lg",
-                                       style={"text-align": "center"},
-                                       className="mb-5",
-                                       id="email_button")
-                            ],
-                            href='mailto:innspill@plukkappen.no',
-                            className='mt-3 mb-3'),
+                        dbc.Col([
+                            html.H2("Har du andre spørsmål eller innspill til PLUKK?",
+                                    style={"color": "#ffcc00",
+                                           "text-shadow": "0px 1.5px black",
+                                           "text-align": "left"},
+                                    className="mt-5 mb-2"),
+                            html.P("""Fyll ut skjemaet under, så tar vi kontakt med deg.\n
+                            Vi gleder oss til å høre fra deg!
+                            """,
+                                   style={"color": "#F6F6F6",
+                                          "font-family": "courier new",
+                                          "text-shadow": "0px 1px black",
+                                          "text-align": "left"},
+                                   className=""),
+                            feedback_form_body
+                                     ],
+                            style={"font-size": "1.2rem"},
+                            lg={"size": 8, "offset": 2},
+                            md={"size": 12, "offset": 0},
+                            sm={"size": 12, "offset": 0},
+                                )
                     ],
                         width=12,
                         style={"text-align": "center"}
@@ -282,7 +281,9 @@ plastavfallet befinner seg i dag.
                     style={"border": "dashed",
                            "border-size": "10px",
                            "border-color": "#3b3b3b",
-                           "text-align": "center"},
+                           "border-radius": "20px",
+                           "text-align": "center",
+                           "background-color": "rgba(0,0,0,0.1)"},
                     lg=9,
                     md=11,
                     sm=11,
@@ -321,7 +322,7 @@ Dette er PLUKK.
                     lg=5,
                     md=10,
                     style={"text-align": "center"},
-                    className="mt-3 mb-5"
+                    className="mt-5 mb-3"
                 )
                 # Closing parantheses of Story row
             ],

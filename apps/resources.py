@@ -19,7 +19,34 @@ cs = 'postgres://qxtmarboumalkd:a70cd9ccf0b9b65bbb7d0da3bffe65c94f99c8b7c' \
 engine = create_engine(cs)
 
 
-# Submit forms
+# Submit feedback form
+@app.callback(
+    Output("feedback_form_output", "children"),
+    [Input("submit_feedback_form", "n_clicks")],
+    [State("feedback_form_name", "value"),
+     State("feedback_form_email", "value"),
+     State("feedback_form_content", "value")])
+def form_response(n_clicks,
+                  feedback_form_name,
+                  feedback_form_email,
+                  feedback_form_content):
+    if n_clicks:
+        if feedback_form_email is None or feedback_form_content is None:
+            return "Du må fylle inn både e-postadressen og skrive en beskjed."
+        else:
+            feedback_dict = {
+                'name': [feedback_form_name],
+                'email': [feedback_form_email],
+                'message': [feedback_form_content]
+                        }
+            df = pd.DataFrame(feedback_dict)
+            df.to_sql('plukk_feedback',
+                      engine,
+                      if_exists='append')
+            return "Takk for tilbakemeldingen din!"
+
+
+# Submit tester form
 @app.callback(
     Output("main_form_output", "children"),
     [Input("submit_main_form", "n_clicks")],
@@ -82,7 +109,7 @@ q1 = html.Tr([
         dbc.Button(
             "Åpne/Lukke",
             id="q1_collapse_button",
-            size="md",
+            size="sm",
             color="dark",
             className="mt-1"
         )
@@ -120,7 +147,7 @@ q2 = html.Tr([
         dbc.Button(
             "Åpne/Lukke",
             id="q2_collapse_button",
-            size="md",
+            size="sm",
             color="dark",
             className="mt-1"
         )
@@ -164,26 +191,27 @@ def toggle_q2_collapse(n, is_open):
 # FORMS
 main_form_body = dbc.Form([  # Signup form
     dbc.FormGroup([  # First name input
-        html.P("Navn", style={"font-family": "courier"}),
+        html.P("Navn:", style={"font-family": "courier"}),
         dbc.Input(type="text",
                   id="main_form_name",
                   placeholder="Skriv inn navnet ditt...",
                   style={"width": "80%",
-                         "box-shadow": "0px 2px black"},
+                         "box-shadow": "0px 2px black",
+                         "font-family": "courier"},
                   className="m_bottom_md")
     ]),
     dbc.FormGroup([
-        html.P("E-postadresse*", style={"font-family": "courier"}),
+        html.P("E-postadresse*:", style={"font-family": "courier"}),
         dbc.Input(type="email",
                   id="main_form_email",
                   placeholder="Skriv inn e-posten din...",
                   style={"width": "80%",
                          "box-shadow": "0px 2px black",
-                         "size": "3rem"},
-                  className="m_bottom_md")
+                         "font-family": "courier"},
+                  className="")
     ]),
     html.P("", id="main_form_output", style={"color": "orange"},
-           className="m_bottom_md"),
+           className=""),
     dbc.Button("Send inn!",
                color="warning",
                className="mt-4 mb-2",
@@ -192,3 +220,55 @@ main_form_body = dbc.Form([  # Signup form
                size="lg")
     ])
 
+
+feedback_form_body = dbc.Form([  # Signup form
+    dbc.FormGroup([  # First name input
+        html.P("Navn:", style={"font-family": "courier",
+                              "text-align": "left"}),
+        dbc.Input(type="text",
+                  id="feedback_form_name",
+                  placeholder="Skriv inn navnet ditt...",
+                  style={"width": "100%",
+                         "box-shadow": "0px 2px black",
+                         "font-family": "courier"},
+                  className="mb-2")
+    ]),
+    dbc.FormGroup([
+        html.P("E-postadresse*:",
+               style={"font-family": "courier",
+                      "text-align": "left"},
+               className="mt-4"
+               ),
+        dbc.Input(type="email",
+                  id="feedback_form_email",
+                  placeholder="Skriv inn e-posten din...",
+                  style={"width": "100%",
+                         "box-shadow": "0px 2px black",
+                         "font-family": "courier"},
+                  className="mb-2")
+    ]),
+    dbc.FormGroup([
+        html.P("Innspill/tilbakemelding:",
+               style={"font-family": "courier",
+                      "text-align": "left"},
+               className="mt-4"),
+        dbc.Textarea(
+            id="feedback_form_content",
+            placeholder="Skriv inn din beskjed...",
+            style={"width": "100%",
+                   "box-shadow": "0px 2px black",
+                    "font-family": "courier"},
+            maxLength=800,
+            className="")
+    ]),
+    html.P("", id="feedback_form_output", style={"color": "orange",
+                                                 "font-family": "courier"},
+           className=""),
+    dbc.Button("Send inn",
+               color="dark",
+               className="mt-2 mb-5",
+               style={"box-shadow": "0px 2px black",
+                      "justify-item": "left"},
+               id="submit_feedback_form",
+               size="lg")
+    ])
