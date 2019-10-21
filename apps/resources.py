@@ -80,7 +80,7 @@ q1 = html.Tr([
             style={"white-space": "pre-line"}
         ),
         dbc.Button(
-            "Se svaret",
+            "Åpne/Lukke",
             id="q1_collapse_button",
             size="md",
             color="dark",
@@ -118,7 +118,7 @@ q2 = html.Tr([
                    "color": "#E63b3b3b"}
         ),
         dbc.Button(
-            "Se svaret",
+            "Åpne/Lukke",
             id="q2_collapse_button",
             size="md",
             color="dark",

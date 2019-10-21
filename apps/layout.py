@@ -169,7 +169,7 @@ plastavfallet befinner seg i dag.
                                             width="100%")
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=8
                                 ),  # First card closing parantheses
                                 dbc.Col(
                                     [  # Second card
@@ -179,7 +179,7 @@ plastavfallet befinner seg i dag.
                                         )
                                     ],
                                     lg=4,
-                                    md=10
+                                    md=8
                                 ),  # Second card closing parantheses
                                 dbc.Col(  # Third card
                                     [
@@ -189,7 +189,7 @@ plastavfallet befinner seg i dag.
                                         )
                                     ],
                                     lg=4,
-                                    md=10,
+                                    md=8,
                                     className="m_bottom_lg"
                                 ),  # Third card col closing parantheses
                             ],
