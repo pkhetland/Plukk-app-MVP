@@ -528,7 +528,7 @@ Takk!
                         "font-size": "0.5rem",
                         "text-shadow": "0px 1px black",
                     },
-                    className="mt-5 mb-5 ml-5 mr-5",
+                    className="mt-5 mb-5",
                 ),
                 dbc.Col([
                     html.H2(
@@ -590,6 +590,7 @@ utvikler det visuelle uttrykket og tester forretningsmodellen på deres vegne.
                     lg=2,
                     md=4,
                     sm=4,
+                    xs=4,
                     className="mt-5 mb-3",
                 ),
             ],
