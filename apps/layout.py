@@ -151,12 +151,12 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                         ),
                         dbc.Col(
                             [  # Main col: Paragraph
-                                html.P(
+                                dcc.Markdown(
                                     """\
-PLUKK kommer med mange kule funksjoner som eget poengsystem, felles events, \
-personlige utfordringer, lederlister og et skattekart som viser hvor \
-plastavfallet befinner seg i dag.
-\nHer er noen eksempler:""",
+PLUKK kommer med mange kule funksjoner som **eget poengsystem**, 
+**felles events**, **personlige utfordringer**, **lederlister** og **et 
+skattekart** som viser hvor plastavfallet befinner seg i dag.
+\n**Her er noen eksempler:**""",
                                     style={
                                         "text-align": "center",
                                         "color": "silver",
@@ -571,6 +571,7 @@ utvikler det visuelle uttrykket og tester forretningsmodellen på deres vegne.
                     lg=2,
                     md=4,
                     sm=4,
+                    xs=4,
                     className="",
                 ),
                 dbc.Col(

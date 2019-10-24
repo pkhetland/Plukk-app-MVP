@@ -69,6 +69,32 @@ body {
   outline: 0 !important;
 }
 
+a {
+  background:
+     linear-gradient(
+       to right,
+       var(--mainColor) 0%,
+       var(--mainColor) 5px,
+       transparent 5px
+     );
+    background-repeat: repeat-x;
+    background-size: 100%;
+  color: #000;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background:
+     linear-gradient(
+       to right,
+       var(--mainColor) 0%,
+       var(--mainColor) 5px,
+       transparent
+     );
+}
+
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -200,6 +226,10 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+}
+
+img:hover {
+
 }
 
 svg {
