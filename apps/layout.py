@@ -4,16 +4,14 @@ import dash_html_components as html
 import dash_core_components as dcc
 from apps.resources import faq_table, main_form_body, feedback_form_body
 
+
+# APP BODY
 body = dbc.Container(  # Main container
-    fluid=True,
-    children=[
+    [
         dbc.Row(
             [  # Banner first row
                 dbc.Col(  # Banner first column
-                    lg=5,
-                    md=8,
-                    sm=8,
-                    children=[
+                    [
                         html.H1(
                             "PLUKK.",
                             className="mb-5 mt-5",
@@ -36,6 +34,9 @@ kan store og små dra ut på eventyr for å vinne kule premier og få belønning
                             },
                         ),
                     ],
+                    lg=5,
+                    md=8,
+                    sm=8
                 ),  # Banner first col closure
                 dbc.Col(  # Banner second column
                     [
@@ -491,7 +492,7 @@ Petter Kolstad Hetland \n
 Mobil: 978 87 892 \n
 E-post: Pehe@nmbu.no\n
 Takk!
-                            """
+                                                            """
                                                         ],
                                                         style={
                                                             "font-size": "1rem"
@@ -593,11 +594,12 @@ utvikler det visuelle uttrykket og tester forretningsmodellen på deres vegne.
                     xs=4,
                     className="mt-5 mb-3",
                 ),
-            ],
+            ],  # Footer logo properties
             align="end",
             justify="end",
             style={"background-color": "#3b3b3b"}
         ),  # Footer logo closure
     ],
-    style={"font-family": "Courier New"},  # Container children closure
+    fluid=True,
+    style={"font-family": "Courier New"}  # Container children closure
 )  # Container end bracket
